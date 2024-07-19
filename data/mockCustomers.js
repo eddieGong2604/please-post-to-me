@@ -1,4 +1,5 @@
 import mockVehicles from "./mockCustomerVehicles.js";
+import mockCustomerComms from "./mockCustomerComms.js";
 
 const mockCustomers = [
     // INDIVIDUAL customers
@@ -70,20 +71,7 @@ const mockCustomers = [
                 complaint_finalised_date: null
             }
         ],
-        comms: [
-            {
-                customer_contact_start_date: '2023-01-10T00:00:00Z',
-                policy_number_referenced: 'POL123456',
-                outcome_description: 'Customer inquired about policy details and received a detailed explanation.',
-                outcome_type: 'Inquiry Resolved'
-            },
-            {
-                customer_contact_start_date: '2023-02-20T00:00:00Z',
-                policy_number_referenced: 'POL654321',
-                outcome_description: 'Customer reported a billing error, which was corrected in the system.',
-                outcome_type: 'Billing Issue Resolved'
-            }
-        ],
+        comms: mockCustomerComms,
         invitations: [
             {
                 journey_date: '2023-01-15T00:00:00Z',
@@ -220,20 +208,7 @@ const mockCustomers = [
                 complaint_finalised_date: null
             }
         ],
-        comms: [
-            {
-                customer_contact_start_date: '2023-01-10T00:00:00Z',
-                policy_number_referenced: 'POL123456',
-                outcome_description: 'Customer inquired about policy details and received a detailed explanation.',
-                outcome_type: 'Inquiry Resolved'
-            },
-            {
-                customer_contact_start_date: '2023-02-20T00:00:00Z',
-                policy_number_referenced: 'POL654321',
-                outcome_description: 'Customer reported a billing error, which was corrected in the system.',
-                outcome_type: 'Billing Issue Resolved'
-            }
-        ],
+        comms: mockCustomerComms,
         invitations: [
             {
                 journey_date: '2023-01-15T00:00:00Z',
@@ -371,20 +346,7 @@ const mockCustomers = [
                 complaint_finalised_date: null
             }
         ],
-        comms: [
-            {
-                customer_contact_start_date: '2023-01-10T00:00:00Z',
-                policy_number_referenced: 'POL123456',
-                outcome_description: 'Customer inquired about policy details and received a detailed explanation.',
-                outcome_type: 'Inquiry Resolved'
-            },
-            {
-                customer_contact_start_date: '2023-02-20T00:00:00Z',
-                policy_number_referenced: 'POL654321',
-                outcome_description: 'Customer reported a billing error, which was corrected in the system.',
-                outcome_type: 'Billing Issue Resolved'
-            }
-        ],
+        comms: mockCustomerComms,
         invitations: [
             {
                 journey_date: '2023-01-15T00:00:00Z',
@@ -521,20 +483,7 @@ const mockCustomers = [
                 complaint_finalised_date: null
             }
         ],
-        comms: [
-            {
-                customer_contact_start_date: '2023-01-10T00:00:00Z',
-                policy_number_referenced: 'POL123456',
-                outcome_description: 'Customer inquired about policy details and received a detailed explanation.',
-                outcome_type: 'Inquiry Resolved'
-            },
-            {
-                customer_contact_start_date: '2023-02-20T00:00:00Z',
-                policy_number_referenced: 'POL654321',
-                outcome_description: 'Customer reported a billing error, which was corrected in the system.',
-                outcome_type: 'Billing Issue Resolved'
-            }
-        ],
+        comms: mockCustomerComms,
         invitations: [
             {
                 journey_date: '2023-01-15T00:00:00Z',
@@ -672,20 +621,7 @@ const mockCustomers = [
                 complaint_finalised_date: null
             }
         ],
-        comms: [
-            {
-                customer_contact_start_date: '2023-01-10T00:00:00Z',
-                policy_number_referenced: 'POL123456',
-                outcome_description: 'Customer inquired about policy details and received a detailed explanation.',
-                outcome_type: 'Inquiry Resolved'
-            },
-            {
-                customer_contact_start_date: '2023-02-20T00:00:00Z',
-                policy_number_referenced: 'POL654321',
-                outcome_description: 'Customer reported a billing error, which was corrected in the system.',
-                outcome_type: 'Billing Issue Resolved'
-            }
-        ],
+        comms: mockCustomerComms,
         invitations: [
             {
                 journey_date: '2023-01-15T00:00:00Z',
@@ -825,20 +761,7 @@ const mockCustomers = [
                 complaint_finalised_date: null
             }
         ],
-        comms: [
-            {
-                customer_contact_start_date: '2023-01-10T00:00:00Z',
-                policy_number_referenced: 'POL123456',
-                outcome_description: 'Customer inquired about policy details and received a detailed explanation.',
-                outcome_type: 'Inquiry Resolved'
-            },
-            {
-                customer_contact_start_date: '2023-02-20T00:00:00Z',
-                policy_number_referenced: 'POL654321',
-                outcome_description: 'Customer reported a billing error, which was corrected in the system.',
-                outcome_type: 'Billing Issue Resolved'
-            }
-        ],
+        comms: mockCustomerComms,
         invitations: [
             {
                 journey_date: '2023-01-15T00:00:00Z',
@@ -973,20 +896,7 @@ const mockCustomers = [
                 complaint_finalised_date: null
             }
         ],
-        comms: [
-            {
-                customer_contact_start_date: '2023-01-10T00:00:00Z',
-                policy_number_referenced: 'POL123456',
-                outcome_description: 'Customer inquired about policy details and received a detailed explanation.',
-                outcome_type: 'Inquiry Resolved'
-            },
-            {
-                customer_contact_start_date: '2023-02-20T00:00:00Z',
-                policy_number_referenced: 'POL654321',
-                outcome_description: 'Customer reported a billing error, which was corrected in the system.',
-                outcome_type: 'Billing Issue Resolved'
-            }
-        ],
+        comms: mockCustomerComms,
         invitations: [
             {
                 journey_date: '2023-01-15T00:00:00Z',
@@ -1122,20 +1032,7 @@ const mockCustomers = [
                 complaint_finalised_date: null
             }
         ],
-        comms: [
-            {
-                customer_contact_start_date: '2023-01-10T00:00:00Z',
-                policy_number_referenced: 'POL123456',
-                outcome_description: 'Customer inquired about policy details and received a detailed explanation.',
-                outcome_type: 'Inquiry Resolved'
-            },
-            {
-                customer_contact_start_date: '2023-02-20T00:00:00Z',
-                policy_number_referenced: 'POL654321',
-                outcome_description: 'Customer reported a billing error, which was corrected in the system.',
-                outcome_type: 'Billing Issue Resolved'
-            }
-        ],
+        comms: mockCustomerComms,
         invitations: [
             {
                 journey_date: '2023-01-15T00:00:00Z',
@@ -1223,20 +1120,7 @@ const mockCustomers = [
             { id: 4, customer_type: 'INDIVIDUAL', first_name: 'Alice', middle_name: 'D', last_name: 'Brown', date_of_birth: '1988-07-20', gender: 'Female', start_date: '2021-07-20', is_valid: true, addresses: [] }
         ],
         vehicles: mockVehicles,
-        comms: [
-            {
-                customer_contact_start_date: '2023-01-10T00:00:00Z',
-                policy_number_referenced: 'POL123456',
-                outcome_description: 'Customer inquired about policy details and received a detailed explanation.',
-                outcome_type: 'Inquiry Resolved'
-            },
-            {
-                customer_contact_start_date: '2023-02-20T00:00:00Z',
-                policy_number_referenced: 'POL654321',
-                outcome_description: 'Customer reported a billing error, which was corrected in the system.',
-                outcome_type: 'Billing Issue Resolved'
-            }
-        ],
+        comms: mockCustomerComms,
         invitations: [
             {
                 journey_date: '2023-01-15T00:00:00Z',
