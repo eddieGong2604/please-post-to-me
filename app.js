@@ -10,8 +10,8 @@ const port = 3000;
 
 app.use(bodyParser.json());
 app.use('/customers', customersRoutes);
-app.use('/user-auth', userAuthRoutes);
-app.use('/user-access-token', userAccessTokenRoutes);
+app.use('/users-auth', userAuthRoutes);
+app.use('/users-access-token', userAccessTokenRoutes);
 
 
 
