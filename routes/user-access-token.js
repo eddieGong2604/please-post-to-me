@@ -1,23 +1,33 @@
-import express from 'express';
-import jwt from 'jsonwebtoken';
+import express from "express";
+import jwt from "jsonwebtoken";
+import middleware from "../middleware/index.js";
 
 const router = express.Router();
-const secretKey = 'your_secret_key'; // Replace with your actual secret key
+const jwtSecret = process.env.JWT_SECRET;
+const refreshTokenSecret = process.env.REFRESH_TOKEN_SECRET;
+const jwtExpiry = process.env.JWT_EXPIRY;
+const refreshTokenExpiry = process.env.REFRESH_TOKEN_EXPIRY;
 
-router.post('/', (req, res) => {
-    const { refreshToken } = req.body;
+router.post("/", async (req, res) => {
+  const { refreshToken } = req.body;
 
-    // Validate the refreshToken (In real application, check against the database or other storage)
-    if (!refreshToken) {
-        return res.status(400).json({ error: 'Refresh token is required' });
-    }
+  if (!refreshToken) {
+    return res.status(400).json({ error: "Refresh token is required" });
+  }
 
-    // Here we are assuming the refreshToken is valid. In a real scenario, validate it properly.
-    const jwtToken = jwt.sign({ user: 'sampleUser' }, secretKey, { expiresIn: '1h' });
+  const verifyJwtToken = await middleware.verifyRefeshToken(refreshToken);
+  if (!verifyJwtToken) {
+    return res.status(401).json({
+      message: "Invalid Refresh Token",
+    });
+  }
 
-    res.json({ jwt: jwtToken, refreshToken });
+  // Here we are assuming the refreshToken is valid. In a real scenario, validate it properly.
+  const jwtToken = jwt.sign({ user: "sampleUser" }, jwtSecret, {
+    expiresIn: "1h",
+  });
+
+  res.json({ jwt: jwtToken, refreshToken });
 });
-
-
 
 export default router;
