@@ -1,5 +1,6 @@
 import mockVehicles from "./mockCustomerVehicles.js";
 import mockCustomerComms from "./mockCustomerComms.js";
+import mockCustomerComplaints from "./mockCustomerComplaints.js";
 
 const mockCustomers = [
     // INDIVIDUAL customers
@@ -161,53 +162,7 @@ const mockCustomers = [
             { id: 9, customer_type: 'BUSINESS', organisation_name: 'Enterprise Holdings', start_date: '2021-09-22', is_valid: true, addresses: [{ full_address: '606 Fir St, City, Country', preferred: true, latitude: '32.7157', longitude: '-117.1611', country: 'USA' }] }
         ],
         vehicles: mockVehicles,
-        complaints: [
-            {
-                complaint_category_type: 'Product Quality',
-                complaint_level: 'High',
-                complaint_harmonized_brand: 'Brand A',
-                complaint_portfolio: 'Portfolio 1',
-                harmonized_outcome: 'Resolved',
-                complaint_received_date: '2023-01-15T00:00:00Z',
-                complaint_finalised_date: '2023-02-01T00:00:00Z'
-            },
-            {
-                complaint_category_type: 'Service Delay',
-                complaint_level: 'Medium',
-                complaint_harmonized_brand: 'Brand B',
-                complaint_portfolio: 'Portfolio 2',
-                harmonized_outcome: 'Pending',
-                complaint_received_date: '2023-03-10T00:00:00Z',
-                complaint_finalised_date: null
-            },
-            {
-                complaint_category_type: 'Billing Issue',
-                complaint_level: 'Low',
-                complaint_harmonized_brand: 'Brand C',
-                complaint_portfolio: 'Portfolio 3',
-                harmonized_outcome: 'Resolved',
-                complaint_received_date: '2023-04-05T00:00:00Z',
-                complaint_finalised_date: '2023-04-20T00:00:00Z'
-            },
-            {
-                complaint_category_type: 'Product Defect',
-                complaint_level: 'High',
-                complaint_harmonized_brand: 'Brand D',
-                complaint_portfolio: 'Portfolio 4',
-                harmonized_outcome: 'Unresolved',
-                complaint_received_date: '2023-05-22T00:00:00Z',
-                complaint_finalised_date: '2023-06-15T00:00:00Z'
-            },
-            {
-                complaint_category_type: 'Customer Service',
-                complaint_level: 'Medium',
-                complaint_harmonized_brand: 'Brand E',
-                complaint_portfolio: 'Portfolio 5',
-                harmonized_outcome: 'Pending',
-                complaint_received_date: '2023-07-01T00:00:00Z',
-                complaint_finalised_date: null
-            }
-        ],
+        complaints: mockCustomerComplaints,
         comms: mockCustomerComms,
         invitations: [
             {
@@ -299,53 +254,7 @@ const mockCustomers = [
             { id: 9, customer_type: 'BUSINESS', organisation_name: 'Enterprise Holdings', start_date: '2021-09-22', is_valid: true, addresses: [{ full_address: '606 Fir St, City, Country', preferred: true, latitude: '32.7157', longitude: '-117.1611', country: 'USA' }] }
         ],
         vehicles: mockVehicles,
-        complaints: [
-            {
-                complaint_category_type: 'Product Quality',
-                complaint_level: 'High',
-                complaint_harmonized_brand: 'Brand A',
-                complaint_portfolio: 'Portfolio 1',
-                harmonized_outcome: 'Resolved',
-                complaint_received_date: '2023-01-15T00:00:00Z',
-                complaint_finalised_date: '2023-02-01T00:00:00Z'
-            },
-            {
-                complaint_category_type: 'Service Delay',
-                complaint_level: 'Medium',
-                complaint_harmonized_brand: 'Brand B',
-                complaint_portfolio: 'Portfolio 2',
-                harmonized_outcome: 'Pending',
-                complaint_received_date: '2023-03-10T00:00:00Z',
-                complaint_finalised_date: null
-            },
-            {
-                complaint_category_type: 'Billing Issue',
-                complaint_level: 'Low',
-                complaint_harmonized_brand: 'Brand C',
-                complaint_portfolio: 'Portfolio 3',
-                harmonized_outcome: 'Resolved',
-                complaint_received_date: '2023-04-05T00:00:00Z',
-                complaint_finalised_date: '2023-04-20T00:00:00Z'
-            },
-            {
-                complaint_category_type: 'Product Defect',
-                complaint_level: 'High',
-                complaint_harmonized_brand: 'Brand D',
-                complaint_portfolio: 'Portfolio 4',
-                harmonized_outcome: 'Unresolved',
-                complaint_received_date: '2023-05-22T00:00:00Z',
-                complaint_finalised_date: '2023-06-15T00:00:00Z'
-            },
-            {
-                complaint_category_type: 'Customer Service',
-                complaint_level: 'Medium',
-                complaint_harmonized_brand: 'Brand E',
-                complaint_portfolio: 'Portfolio 5',
-                harmonized_outcome: 'Pending',
-                complaint_received_date: '2023-07-01T00:00:00Z',
-                complaint_finalised_date: null
-            }
-        ],
+        complaints: mockCustomerComplaints,
         comms: mockCustomerComms,
         invitations: [
             {
@@ -436,53 +345,7 @@ const mockCustomers = [
             { id: 9, customer_type: 'BUSINESS', organisation_name: 'Enterprise Holdings', start_date: '2021-09-22', is_valid: true, addresses: [{ full_address: '606 Fir St, City, Country', preferred: true, latitude: '32.7157', longitude: '-117.1611', country: 'USA' }] }
         ],
         vehicles: mockVehicles,
-        complaints: [
-            {
-                complaint_category_type: 'Product Quality',
-                complaint_level: 'High',
-                complaint_harmonized_brand: 'Brand A',
-                complaint_portfolio: 'Portfolio 1',
-                harmonized_outcome: 'Resolved',
-                complaint_received_date: '2023-01-15T00:00:00Z',
-                complaint_finalised_date: '2023-02-01T00:00:00Z'
-            },
-            {
-                complaint_category_type: 'Service Delay',
-                complaint_level: 'Medium',
-                complaint_harmonized_brand: 'Brand B',
-                complaint_portfolio: 'Portfolio 2',
-                harmonized_outcome: 'Pending',
-                complaint_received_date: '2023-03-10T00:00:00Z',
-                complaint_finalised_date: null
-            },
-            {
-                complaint_category_type: 'Billing Issue',
-                complaint_level: 'Low',
-                complaint_harmonized_brand: 'Brand C',
-                complaint_portfolio: 'Portfolio 3',
-                harmonized_outcome: 'Resolved',
-                complaint_received_date: '2023-04-05T00:00:00Z',
-                complaint_finalised_date: '2023-04-20T00:00:00Z'
-            },
-            {
-                complaint_category_type: 'Product Defect',
-                complaint_level: 'High',
-                complaint_harmonized_brand: 'Brand D',
-                complaint_portfolio: 'Portfolio 4',
-                harmonized_outcome: 'Unresolved',
-                complaint_received_date: '2023-05-22T00:00:00Z',
-                complaint_finalised_date: '2023-06-15T00:00:00Z'
-            },
-            {
-                complaint_category_type: 'Customer Service',
-                complaint_level: 'Medium',
-                complaint_harmonized_brand: 'Brand E',
-                complaint_portfolio: 'Portfolio 5',
-                harmonized_outcome: 'Pending',
-                complaint_received_date: '2023-07-01T00:00:00Z',
-                complaint_finalised_date: null
-            }
-        ],
+        complaints: mockCustomerComplaints,
         comms: mockCustomerComms,
         invitations: [
             {
@@ -574,53 +437,7 @@ const mockCustomers = [
             { id: 9, customer_type: 'BUSINESS', organisation_name: 'Enterprise Holdings', start_date: '2021-09-22', is_valid: true, addresses: [{ full_address: '606 Fir St, City, Country', preferred: true, latitude: '32.7157', longitude: '-117.1611', country: 'USA' }] }
         ],
         vehicles: mockVehicles,
-        complaints: [
-            {
-                complaint_category_type: 'Product Quality',
-                complaint_level: 'High',
-                complaint_harmonized_brand: 'Brand A',
-                complaint_portfolio: 'Portfolio 1',
-                harmonized_outcome: 'Resolved',
-                complaint_received_date: '2023-01-15',
-                complaint_finalised_date: '2023-02-01'
-            },
-            {
-                complaint_category_type: 'Service Delay',
-                complaint_level: 'Medium',
-                complaint_harmonized_brand: 'Brand B',
-                complaint_portfolio: 'Portfolio 2',
-                harmonized_outcome: 'Pending',
-                complaint_received_date: '2023-03-10',
-                complaint_finalised_date: null
-            },
-            {
-                complaint_category_type: 'Billing Issue',
-                complaint_level: 'Low',
-                complaint_harmonized_brand: 'Brand C',
-                complaint_portfolio: 'Portfolio 3',
-                harmonized_outcome: 'Resolved',
-                complaint_received_date: '2023-04-05',
-                complaint_finalised_date: '2023-04-20'
-            },
-            {
-                complaint_category_type: 'Product Defect',
-                complaint_level: 'High',
-                complaint_harmonized_brand: 'Brand D',
-                complaint_portfolio: 'Portfolio 4',
-                harmonized_outcome: 'Unresolved',
-                complaint_received_date: '2023-05-22',
-                complaint_finalised_date: '2023-06-15'
-            },
-            {
-                complaint_category_type: 'Customer Service',
-                complaint_level: 'Medium',
-                complaint_harmonized_brand: 'Brand E',
-                complaint_portfolio: 'Portfolio 5',
-                harmonized_outcome: 'Pending',
-                complaint_received_date: '2023-07-01',
-                complaint_finalised_date: null
-            }
-        ],
+        complaints: mockCustomerComplaints,
         comms: mockCustomerComms,
         invitations: [
             {
@@ -714,53 +531,7 @@ const mockCustomers = [
             { id: 9, customer_type: 'BUSINESS', organisation_name: 'Enterprise Holdings', start_date: '2021-09-22', is_valid: true, addresses: [{ full_address: '606 Fir St, City, Country', preferred: true, latitude: '32.7157', longitude: '-117.1611', country: 'USA' }] }
         ],
         vehicles: mockVehicles,
-        complaints: [
-            {
-                complaint_category_type: 'Product Quality',
-                complaint_level: 'High',
-                complaint_harmonized_brand: 'Brand A',
-                complaint_portfolio: 'Portfolio 1',
-                harmonized_outcome: 'Resolved',
-                complaint_received_date: '2023-01-15T00:00:00Z',
-                complaint_finalised_date: '2023-02-01T00:00:00Z'
-            },
-            {
-                complaint_category_type: 'Service Delay',
-                complaint_level: 'Medium',
-                complaint_harmonized_brand: 'Brand B',
-                complaint_portfolio: 'Portfolio 2',
-                harmonized_outcome: 'Pending',
-                complaint_received_date: '2023-03-10T00:00:00Z',
-                complaint_finalised_date: null
-            },
-            {
-                complaint_category_type: 'Billing Issue',
-                complaint_level: 'Low',
-                complaint_harmonized_brand: 'Brand C',
-                complaint_portfolio: 'Portfolio 3',
-                harmonized_outcome: 'Resolved',
-                complaint_received_date: '2023-04-05T00:00:00Z',
-                complaint_finalised_date: '2023-04-20T00:00:00Z'
-            },
-            {
-                complaint_category_type: 'Product Defect',
-                complaint_level: 'High',
-                complaint_harmonized_brand: 'Brand D',
-                complaint_portfolio: 'Portfolio 4',
-                harmonized_outcome: 'Unresolved',
-                complaint_received_date: '2023-05-22T00:00:00Z',
-                complaint_finalised_date: '2023-06-15T00:00:00Z'
-            },
-            {
-                complaint_category_type: 'Customer Service',
-                complaint_level: 'Medium',
-                complaint_harmonized_brand: 'Brand E',
-                complaint_portfolio: 'Portfolio 5',
-                harmonized_outcome: 'Pending',
-                complaint_received_date: '2023-07-01T00:00:00Z',
-                complaint_finalised_date: null
-            }
-        ],
+        complaints: mockCustomerComplaints,
         comms: mockCustomerComms,
         invitations: [
             {
@@ -849,53 +620,7 @@ const mockCustomers = [
             { id: 4, customer_type: 'INDIVIDUAL', first_name: 'Alice', middle_name: 'D', last_name: 'Brown', date_of_birth: '1988-07-20', gender: 'Female', start_date: '2021-07-20', is_valid: true, addresses: [] }
         ],
         vehicles: mockVehicles,
-        complaints: [
-            {
-                complaint_category_type: 'Product Quality',
-                complaint_level: 'High',
-                complaint_harmonized_brand: 'Brand A',
-                complaint_portfolio: 'Portfolio 1',
-                harmonized_outcome: 'Resolved',
-                complaint_received_date: '2023-01-15T00:00:00Z',
-                complaint_finalised_date: '2023-02-01T00:00:00Z'
-            },
-            {
-                complaint_category_type: 'Service Delay',
-                complaint_level: 'Medium',
-                complaint_harmonized_brand: 'Brand B',
-                complaint_portfolio: 'Portfolio 2',
-                harmonized_outcome: 'Pending',
-                complaint_received_date: '2023-03-10T00:00:00Z',
-                complaint_finalised_date: null
-            },
-            {
-                complaint_category_type: 'Billing Issue',
-                complaint_level: 'Low',
-                complaint_harmonized_brand: 'Brand C',
-                complaint_portfolio: 'Portfolio 3',
-                harmonized_outcome: 'Resolved',
-                complaint_received_date: '2023-04-05T00:00:00Z',
-                complaint_finalised_date: '2023-04-20T00:00:00Z'
-            },
-            {
-                complaint_category_type: 'Product Defect',
-                complaint_level: 'High',
-                complaint_harmonized_brand: 'Brand D',
-                complaint_portfolio: 'Portfolio 4',
-                harmonized_outcome: 'Unresolved',
-                complaint_received_date: '2023-05-22T00:00:00Z',
-                complaint_finalised_date: '2023-06-15T00:00:00Z'
-            },
-            {
-                complaint_category_type: 'Customer Service',
-                complaint_level: 'Medium',
-                complaint_harmonized_brand: 'Brand E',
-                complaint_portfolio: 'Portfolio 5',
-                harmonized_outcome: 'Pending',
-                complaint_received_date: '2023-07-01T00:00:00Z',
-                complaint_finalised_date: null
-            }
-        ],
+        complaints: mockCustomerComplaints,
         comms: mockCustomerComms,
         invitations: [
             {
@@ -985,53 +710,7 @@ const mockCustomers = [
             { id: 7, customer_type: 'BUSINESS', organisation_name: 'Global Industries Inc', start_date: '2022-08-15', is_valid: true, addresses: [] }
         ],
         vehicles: mockVehicles,
-        complaints: [
-            {
-                complaint_category_type: 'Product Quality',
-                complaint_level: 'High',
-                complaint_harmonized_brand: 'Brand A',
-                complaint_portfolio: 'Portfolio 1',
-                harmonized_outcome: 'Resolved',
-                complaint_received_date: '2023-01-15T00:00:00Z',
-                complaint_finalised_date: '2023-02-01T00:00:00Z'
-            },
-            {
-                complaint_category_type: 'Service Delay',
-                complaint_level: 'Medium',
-                complaint_harmonized_brand: 'Brand B',
-                complaint_portfolio: 'Portfolio 2',
-                harmonized_outcome: 'Pending',
-                complaint_received_date: '2023-03-10T00:00:00Z',
-                complaint_finalised_date: null
-            },
-            {
-                complaint_category_type: 'Billing Issue',
-                complaint_level: 'Low',
-                complaint_harmonized_brand: 'Brand C',
-                complaint_portfolio: 'Portfolio 3',
-                harmonized_outcome: 'Resolved',
-                complaint_received_date: '2023-04-05T00:00:00Z',
-                complaint_finalised_date: '2023-04-20T00:00:00Z'
-            },
-            {
-                complaint_category_type: 'Product Defect',
-                complaint_level: 'High',
-                complaint_harmonized_brand: 'Brand D',
-                complaint_portfolio: 'Portfolio 4',
-                harmonized_outcome: 'Unresolved',
-                complaint_received_date: '2023-05-22T00:00:00Z',
-                complaint_finalised_date: '2023-06-15T00:00:00Z'
-            },
-            {
-                complaint_category_type: 'Customer Service',
-                complaint_level: 'Medium',
-                complaint_harmonized_brand: 'Brand E',
-                complaint_portfolio: 'Portfolio 5',
-                harmonized_outcome: 'Pending',
-                complaint_received_date: '2023-07-01T00:00:00Z',
-                complaint_finalised_date: null
-            }
-        ],
+        complaints: mockCustomerComplaints,
         comms: mockCustomerComms,
         invitations: [
             {
@@ -1121,6 +800,7 @@ const mockCustomers = [
         ],
         vehicles: mockVehicles,
         comms: mockCustomerComms,
+        complaints: mockCustomerComplaints,
         invitations: [
             {
                 journey_date: '2023-01-15T00:00:00Z',
