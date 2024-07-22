@@ -3,6 +3,8 @@ import mockCustomerComms from "./mockCustomerComms.js";
 import mockCustomerComplaints from "./mockCustomerComplaints.js";
 import mockAliases from "./mockCustomerAliases.js";
 import mockCustomerPolicies from "./mockCustomerPolicies.js";
+import mockCustomerRelations from "./mockCustomerRelations.js";
+import mockCustomerOnlineActivities from "./mockCustomerOnlineActivities.js";
 
 const mockCustomers = [
     // INDIVIDUAL customers
@@ -20,12 +22,7 @@ const mockCustomers = [
             { full_address: '123 Main St, City, Country', preferred: true, latitude: '40.7128', longitude: '-74.0060', country: 'USA' },
             { full_address: '124 Main St, City, Country', preferred: false, country: 'USA' }
         ],
-        relations: [
-            { id: 2, customer_type: 'INDIVIDUAL', first_name: 'Jane', middle_name: 'B', last_name: 'Smith', date_of_birth: '1990-02-15', gender: 'Female', start_date: '2023-02-15', is_valid: true, addresses: [{ full_address: '456 Oak St, City, Country', preferred: true, latitude: '34.0522', longitude: '-118.2437', country: 'USA' }] },
-            { id: 3, customer_type: 'INDIVIDUAL', first_name: 'Eddy', middle_name: 'C', last_name: 'Johnson', date_of_birth: '1985-03-30', gender: 'Male', start_date: '2022-03-30', is_valid: true, addresses: [{ full_address: '789 Pine St, City, Country', preferred: true, latitude: '37.7749', longitude: '-122.4194', country: 'USA' }] },
-            { id: 6, customer_type: 'BUSINESS', organisation_name: 'Tech Solutions Ltd', start_date: '2021-06-01', is_valid: true, addresses: [{ full_address: '303 Cedar St, City, Country', preferred: true, latitude: '36.1699', longitude: '-115.1398', country: 'USA' }] },
-            { id: 7, customer_type: 'BUSINESS', organisation_name: 'Global Industries Inc', start_date: '2022-08-15', is_valid: true, addresses: [] }
-        ],
+        relations: mockCustomerRelations,
         vehicles: mockVehicles,
         aliases: mockAliases,
         complaints: [
@@ -76,6 +73,7 @@ const mockCustomers = [
             }
         ],
         comms: mockCustomerComms,
+        activities: mockCustomerOnlineActivities,
         invitations: [
             {
                 journey_date: '2023-01-15T00:00:00Z',
@@ -123,12 +121,7 @@ const mockCustomers = [
         addresses: [
             { full_address: '456 Oak St, City, Country', preferred: true, latitude: '34.0522', longitude: '-118.2437', country: 'USA' }
         ],
-        relations: [
-            { id: 1, customer_type: 'INDIVIDUAL', first_name: 'John', middle_name: 'A', last_name: 'Doe', date_of_birth: '1980-01-01', gender: 'Male', start_date: '2022-01-01', is_valid: true, addresses: [{ full_address: '123 Main St, City, Country', preferred: true, latitude: '40.7128', longitude: '-74.0060', country: 'USA' }] },
-            { id: 4, customer_type: 'INDIVIDUAL', first_name: 'Alice', middle_name: 'D', last_name: 'Brown', date_of_birth: '1988-07-20', gender: 'Female', start_date: '2021-07-20', is_valid: true, addresses: [] },
-            { id: 8, customer_type: 'BUSINESS', organisation_name: 'Creative Works LLC', start_date: '2023-01-10', is_valid: true, addresses: [{ full_address: '505 Aspen St, City, Country', preferred: true, latitude: '40.7306', longitude: '-73.9352', country: 'USA' }] },
-            { id: 9, customer_type: 'BUSINESS', organisation_name: 'Enterprise Holdings', start_date: '2021-09-22', is_valid: true, addresses: [{ full_address: '606 Fir St, City, Country', preferred: true, latitude: '32.7157', longitude: '-117.1611', country: 'USA' }] }
-        ],
+        relations: mockCustomerRelations,
         vehicles: mockVehicles,
         complaints: mockCustomerComplaints,
         comms: mockCustomerComms,
@@ -152,6 +145,7 @@ const mockCustomers = [
             }
         ],
         policies: mockCustomerPolicies,
+        activities: mockCustomerOnlineActivities,
         fnols: [
             {
                 incident_datetime: '2023-01-01T10:00:00Z',
@@ -181,15 +175,11 @@ const mockCustomers = [
         addresses: [
             { full_address: '789 Pine St, City, Country', preferred: true, latitude: '37.7749', longitude: '-122.4194', country: 'USA' }
         ],
-        relations: [
-            { id: 1, customer_type: 'INDIVIDUAL', first_name: 'John', middle_name: 'A', last_name: 'Doe', date_of_birth: '1980-01-01', gender: 'Male', start_date: '2022-01-01', is_valid: true, addresses: [{ full_address: '123 Main St, City, Country', preferred: true, latitude: '40.7128', longitude: '-74.0060', country: 'USA' }] },
-            { id: 4, customer_type: 'INDIVIDUAL', first_name: 'Alice', middle_name: 'D', last_name: 'Brown', date_of_birth: '1988-07-20', gender: 'Female', start_date: '2021-07-20', is_valid: true, addresses: [] },
-            { id: 8, customer_type: 'BUSINESS', organisation_name: 'Creative Works LLC', start_date: '2023-01-10', is_valid: true, addresses: [{ full_address: '505 Aspen St, City, Country', preferred: true, latitude: '40.7306', longitude: '-73.9352', country: 'USA' }] },
-            { id: 9, customer_type: 'BUSINESS', organisation_name: 'Enterprise Holdings', start_date: '2021-09-22', is_valid: true, addresses: [{ full_address: '606 Fir St, City, Country', preferred: true, latitude: '32.7157', longitude: '-117.1611', country: 'USA' }] }
-        ],
+        relations: mockCustomerRelations,
         vehicles: mockVehicles,
         complaints: mockCustomerComplaints,
         comms: mockCustomerComms,
+        activities: mockCustomerOnlineActivities,
         aliases: mockAliases,
         invitations: [
             {
@@ -273,15 +263,11 @@ const mockCustomers = [
         start_date: '2021-07-20T00:00:00.000Z',
         is_valid: true,
         addresses: [],
-        relations: [
-            { id: 2, customer_type: 'INDIVIDUAL', first_name: 'Jane', middle_name: 'B', last_name: 'Smith', date_of_birth: '1990-02-15', gender: 'Female', start_date: '2023-02-15', is_valid: true, addresses: [{ full_address: '456 Oak St, City, Country', preferred: true, latitude: '34.0522', longitude: '-118.2437', country: 'USA' }] },
-            { id: 3, customer_type: 'INDIVIDUAL', first_name: 'Eddy', middle_name: 'C', last_name: 'Johnson', date_of_birth: '1985-03-30', gender: 'Male', start_date: '2022-03-30', is_valid: true, addresses: [{ full_address: '789 Pine St, City, Country', preferred: true, latitude: '37.7749', longitude: '-122.4194', country: 'USA' }] },
-            { id: 8, customer_type: 'BUSINESS', organisation_name: 'Creative Works LLC', start_date: '2023-01-10', is_valid: true, addresses: [{ full_address: '505 Aspen St, City, Country', preferred: true, latitude: '40.7306', longitude: '-73.9352', country: 'USA' }] },
-            { id: 9, customer_type: 'BUSINESS', organisation_name: 'Enterprise Holdings', start_date: '2021-09-22', is_valid: true, addresses: [{ full_address: '606 Fir St, City, Country', preferred: true, latitude: '32.7157', longitude: '-117.1611', country: 'USA' }] }
-        ],
+        relations: mockCustomerRelations,
         aliases: mockAliases,
         vehicles: mockVehicles,
         complaints: mockCustomerComplaints,
+        activities: mockCustomerOnlineActivities,
         comms: mockCustomerComms,
         invitations: [
             {
@@ -331,15 +317,11 @@ const mockCustomers = [
         start_date: '2024-11-05T00:00:00.000Z',
         is_valid: false,
         addresses: [],
-        relations: [
-            { id: 6, customer_type: 'BUSINESS', organisation_name: 'Tech Solutions Ltd', start_date: '2021-06-01', is_valid: true, addresses: [{ full_address: '303 Cedar St, City, Country', preferred: true, latitude: '36.1699', longitude: '-115.1398', country: 'USA' }] },
-            { id: 7, customer_type: 'BUSINESS', organisation_name: 'Global Industries Inc', start_date: '2022-08-15', is_valid: true, addresses: [] },
-            { id: 8, customer_type: 'BUSINESS', organisation_name: 'Creative Works LLC', start_date: '2023-01-10', is_valid: true, addresses: [{ full_address: '505 Aspen St, City, Country', preferred: true, latitude: '40.7306', longitude: '-73.9352', country: 'USA' }] },
-            { id: 9, customer_type: 'BUSINESS', organisation_name: 'Enterprise Holdings', start_date: '2021-09-22', is_valid: true, addresses: [{ full_address: '606 Fir St, City, Country', preferred: true, latitude: '32.7157', longitude: '-117.1611', country: 'USA' }] }
-        ],
+        relations: mockCustomerRelations,
         vehicles: mockVehicles,
         complaints: mockCustomerComplaints,
         comms: mockCustomerComms,
+        activities: mockCustomerOnlineActivities,
         aliases: mockAliases,
         invitations: [
             {
@@ -426,14 +408,10 @@ const mockCustomers = [
         addresses: [
             { full_address: '303 Cedar St, City, Country', preferred: true, latitude: '36.1699', longitude: '-115.1398', country: 'USA' }
         ],
-        relations: [
-            { id: 1, customer_type: 'INDIVIDUAL', first_name: 'John', middle_name: 'A', last_name: 'Doe', date_of_birth: '1980-01-01', gender: 'Male', start_date: '2022-01-01', is_valid: true, addresses: [{ full_address: '123 Main St, City, Country', preferred: true, latitude: '40.7128', longitude: '-74.0060', country: 'USA' }] },
-            { id: 2, customer_type: 'INDIVIDUAL', first_name: 'Jane', middle_name: 'B', last_name: 'Smith', date_of_birth: '1990-02-15', gender: 'Female', start_date: '2023-02-15', is_valid: true, addresses: [{ full_address: '456 Oak St, City, Country', preferred: true, latitude: '34.0522', longitude: '-118.2437', country: 'USA' }] },
-            { id: 8, customer_type: 'BUSINESS', organisation_name: 'Creative Works LLC', start_date: '2023-01-10', is_valid: true, addresses: [{ full_address: '505 Aspen St, City, Country', preferred: true, latitude: '40.7306', longitude: '-73.9352', country: 'USA' }] },
-            { id: 9, customer_type: 'BUSINESS', organisation_name: 'Enterprise Holdings', start_date: '2021-09-22', is_valid: true, addresses: [{ full_address: '606 Fir St, City, Country', preferred: true, latitude: '32.7157', longitude: '-117.1611', country: 'USA' }] }
-        ],
+        relations: mockCustomerRelations,
         vehicles: mockVehicles,
         complaints: mockCustomerComplaints,
+        activities: mockCustomerOnlineActivities,
         comms: mockCustomerComms,
         aliases: mockAliases,
         invitations: [
@@ -481,15 +459,11 @@ const mockCustomers = [
         start_date: '2022-08-15T00:00:00.000Z',
         is_valid: true,
         addresses: [],
-        relations: [
-            { id: 1, customer_type: 'INDIVIDUAL', first_name: 'John', middle_name: 'A', last_name: 'Doe', date_of_birth: '1980-01-01', gender: 'Male', start_date: '2022-01-01', is_valid: true, addresses: [{ full_address: '123 Main St, City, Country', preferred: true, latitude: '40.7128', longitude: '-74.0060', country: 'USA' }] },
-            { id: 2, customer_type: 'INDIVIDUAL', first_name: 'Jane', middle_name: 'B', last_name: 'Smith', date_of_birth: '1990-02-15', gender: 'Female', start_date: '2023-02-15', is_valid: true, addresses: [{ full_address: '456 Oak St, City, Country', preferred: true, latitude: '34.0522', longitude: '-118.2437', country: 'USA' }] },
-            { id: 3, customer_type: 'INDIVIDUAL', first_name: 'Eddy', middle_name: 'C', last_name: 'Johnson', date_of_birth: '1985-03-30', gender: 'Male', start_date: '2022-03-30', is_valid: true, addresses: [{ full_address: '789 Pine St, City, Country', preferred: true, latitude: '37.7749', longitude: '-122.4194', country: 'USA' }] },
-            { id: 4, customer_type: 'INDIVIDUAL', first_name: 'Alice', middle_name: 'D', last_name: 'Brown', date_of_birth: '1988-07-20', gender: 'Female', start_date: '2021-07-20', is_valid: true, addresses: [] }
-        ],
+        relations: mockCustomerRelations,
         vehicles: mockVehicles,
         complaints: mockCustomerComplaints,
         comms: mockCustomerComms,
+        activities: mockCustomerOnlineActivities,
         invitations: [
             {
                 journey_date: '2023-01-15T00:00:00Z',
@@ -536,12 +510,8 @@ const mockCustomers = [
         addresses: [
             { full_address: '505 Aspen St, City, Country', preferred: true, latitude: '40.7306', longitude: '-73.9352', country: 'USA' }
         ],
-        relations: [
-            { id: 1, customer_type: 'INDIVIDUAL', first_name: 'John', middle_name: 'A', last_name: 'Doe', date_of_birth: '1980-01-01', gender: 'Male', start_date: '2022-01-01', is_valid: true, addresses: [{ full_address: '123 Main St, City, Country', preferred: true, latitude: '40.7128', longitude: '-74.0060', country: 'USA' }] },
-            { id: 2, customer_type: 'INDIVIDUAL', first_name: 'Jane', middle_name: 'B', last_name: 'Smith', date_of_birth: '1990-02-15', gender: 'Female', start_date: '2023-02-15', is_valid: true, addresses: [{ full_address: '456 Oak St, City, Country', preferred: true, latitude: '34.0522', longitude: '-118.2437', country: 'USA' }] },
-            { id: 6, customer_type: 'BUSINESS', organisation_name: 'Tech Solutions Ltd', start_date: '2021-06-01', is_valid: true, addresses: [{ full_address: '303 Cedar St, City, Country', preferred: true, latitude: '36.1699', longitude: '-115.1398', country: 'USA' }] },
-            { id: 7, customer_type: 'BUSINESS', organisation_name: 'Global Industries Inc', start_date: '2022-08-15', is_valid: true, addresses: [] }
-        ],
+        relations: mockCustomerRelations,
+        activities: mockCustomerOnlineActivities,
         vehicles: mockVehicles,
         aliases: mockAliases,
         complaints: mockCustomerComplaints,
@@ -591,16 +561,12 @@ const mockCustomers = [
         addresses: [
             { full_address: '606 Fir St, City, Country', preferred: true, latitude: '32.7157', longitude: '-117.1611', country: 'USA' }
         ],
-        relations: [
-            { id: 1, customer_type: 'INDIVIDUAL', first_name: 'John', middle_name: 'A', last_name: 'Doe', date_of_birth: '1980-01-01', gender: 'Male', start_date: '2022-01-01', is_valid: true, addresses: [{ full_address: '123 Main St, City, Country', preferred: true, latitude: '40.7128', longitude: '-74.0060', country: 'USA' }] },
-            { id: 2, customer_type: 'INDIVIDUAL', first_name: 'Jane', middle_name: 'B', last_name: 'Smith', date_of_birth: '1990-02-15', gender: 'Female', start_date: '2023-02-15', is_valid: true, addresses: [{ full_address: '456 Oak St, City, Country', preferred: true, latitude: '34.0522', longitude: '-118.2437', country: 'USA' }] },
-            { id: 3, customer_type: 'INDIVIDUAL', first_name: 'Eddy', middle_name: 'C', last_name: 'Johnson', date_of_birth: '1985-03-30', gender: 'Male', start_date: '2022-03-30', is_valid: true, addresses: [{ full_address: '789 Pine St, City, Country', preferred: true, latitude: '37.7749', longitude: '-122.4194', country: 'USA' }] },
-            { id: 4, customer_type: 'INDIVIDUAL', first_name: 'Alice', middle_name: 'D', last_name: 'Brown', date_of_birth: '1988-07-20', gender: 'Female', start_date: '2021-07-20', is_valid: true, addresses: [] }
-        ],
+        relations: mockCustomerRelations,
         vehicles: mockVehicles,
         comms: mockCustomerComms,
         complaints: mockCustomerComplaints,
         aliases: mockAliases,
+        activities: mockCustomerOnlineActivities,
         invitations: [
             {
                 journey_date: '2023-01-15T00:00:00Z',

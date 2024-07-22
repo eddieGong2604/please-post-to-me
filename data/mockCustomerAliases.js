@@ -1,4 +1,4 @@
-const mockAliases = [
+const mockCustomerAliases = [
     {
         contact_points: [
             {
@@ -29,4 +29,4 @@ const mockAliases = [
     }
 ];
 
-export default mockAliases;
+export default mockCustomerAliases;

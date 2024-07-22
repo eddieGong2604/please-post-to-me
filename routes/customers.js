@@ -98,4 +98,14 @@ router.get('/:id/invitations', (req, res) => {
     }
 });
 
+router.get('/:id/online-activities', (req, res) => {
+    // Mock data: return 2 individual and 2 business customers
+    const customer = findCustomerById(req.params.id);
+    if (customer) {
+        res.json({ activities: customer.activities });
+    } else {
+        res.status(404).json({ error: 'Customer not found' });
+    }
+});
+
 export default router;
