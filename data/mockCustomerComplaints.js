@@ -7,7 +7,10 @@ const mockCustomerComplaints = [
         complaint_portfolio: 'Portfolio 1',
         harmonized_outcome: 'Resolved',
         complaint_received_date: '2023-01-15T00:00:00Z',
-        complaint_finalised_date: '2023-02-01T00:00:00Z'
+        complaint_finalised_date: '2023-02-01T00:00:00Z',
+        harmonized_touchpoint: "Claims & Assessing",
+        complaint_portfolio_type1: "Private Motor",
+        complaint_portfolio_type2: "Personal Lines"
     },
     {
         complaint_category_type: 'Service Delay',
@@ -16,7 +19,10 @@ const mockCustomerComplaints = [
         complaint_portfolio: 'Portfolio 2',
         harmonized_outcome: 'Pending',
         complaint_received_date: '2023-03-10T00:00:00Z',
-        complaint_finalised_date: null
+        complaint_finalised_date: null,
+        harmonized_touchpoint: "Claims & Assessing",
+        complaint_portfolio_type1: "Private Motor",
+        complaint_portfolio_type2: "Personal Lines"
     },
     {
         complaint_category_type: 'Billing Issue',
@@ -25,7 +31,10 @@ const mockCustomerComplaints = [
         complaint_portfolio: 'Portfolio 3',
         harmonized_outcome: 'Resolved',
         complaint_received_date: '2023-04-05T00:00:00Z',
-        complaint_finalised_date: '2023-04-20T00:00:00Z'
+        complaint_finalised_date: '2023-04-20T00:00:00Z',
+        harmonized_touchpoint: "Claims & Assessing",
+        complaint_portfolio_type1: "Private Motor",
+        complaint_portfolio_type2: "Personal Lines"
     },
     {
         complaint_category_type: 'Product Defect',
@@ -34,7 +43,10 @@ const mockCustomerComplaints = [
         complaint_portfolio: 'Portfolio 4',
         harmonized_outcome: 'Unresolved',
         complaint_received_date: '2023-05-22T00:00:00Z',
-        complaint_finalised_date: '2023-06-15T00:00:00Z'
+        complaint_finalised_date: '2023-06-15T00:00:00Z',
+        harmonized_touchpoint: "Claims & Assessing",
+        complaint_portfolio_type1: "Private Motor",
+        complaint_portfolio_type2: "Personal Lines"
     },
     {
         complaint_category_type: 'Customer Service',
@@ -43,7 +55,10 @@ const mockCustomerComplaints = [
         complaint_portfolio: 'Portfolio 5',
         harmonized_outcome: 'Pending',
         complaint_received_date: '2023-07-01T00:00:00Z',
-        complaint_finalised_date: null
+        complaint_finalised_date: null,
+        harmonized_touchpoint: "Claims & Assessing",
+        complaint_portfolio_type1: "Private Motor",
+        complaint_portfolio_type2: "Personal Lines"
     }
 ]
 
