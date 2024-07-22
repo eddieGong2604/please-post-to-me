@@ -1,6 +1,8 @@
 import mockVehicles from "./mockCustomerVehicles.js";
 import mockCustomerComms from "./mockCustomerComms.js";
 import mockCustomerComplaints from "./mockCustomerComplaints.js";
+import mockAliases from "./mockCustomerAliases.js";
+import mockCustomerPolicies from "./mockCustomerPolicies.js";
 
 const mockCustomers = [
     // INDIVIDUAL customers
@@ -25,6 +27,7 @@ const mockCustomers = [
             { id: 7, customer_type: 'BUSINESS', organisation_name: 'Global Industries Inc', start_date: '2022-08-15', is_valid: true, addresses: [] }
         ],
         vehicles: mockVehicles,
+        aliases: mockAliases,
         complaints: [
             {
                 complaint_category_type: 'Product Quality',
@@ -91,42 +94,7 @@ const mockCustomers = [
                 product_sub_type: 'Car'
             }
         ],
-        policies: [
-            {
-                policy_start_date: '2022-01-01T00:00:00Z',
-                source_policy_key: 'POL123456',
-                policy_end_date: '2024-12-31T00:00:00Z',
-                claims: [
-                    {
-                        claimDate: '2023-03-15T00:00:00Z',
-                        closeDate: null,
-                        claimNumber: 'CLM123456'
-                    },
-                    {
-                        claimDate: null,
-                        closeDate: '2023-05-20T00:00:00Z',
-                        claimNumber: 'CLM654321'
-                    }
-                ]
-            },
-            {
-                policy_start_date: '2021-06-01T00:00:00Z',
-                source_policy_key: 'POL654321',
-                policy_end_date: '2025-05-15T00:00:00Z',
-                claims: [
-                    {
-                        claimDate: '2022-08-25T00:00:00Z',
-                        closeDate: null,
-                        claimNumber: 'CLM789012'
-                    },
-                    {
-                        claimDate: null,
-                        closeDate: '2023-01-30T00:00:00Z',
-                        claimNumber: 'CLM210987'
-                    }
-                ]
-            }
-        ],
+        policies: mockCustomerPolicies,
         fnols: [
             {
                 incident_datetime: '2023-01-01T10:00:00Z',
@@ -164,6 +132,7 @@ const mockCustomers = [
         vehicles: mockVehicles,
         complaints: mockCustomerComplaints,
         comms: mockCustomerComms,
+        aliases: mockAliases,
         invitations: [
             {
                 journey_date: '2023-01-15T00:00:00Z',
@@ -182,42 +151,7 @@ const mockCustomers = [
                 product_sub_type: 'Car'
             }
         ],
-        policies: [
-            {
-                policy_start_date: '2022-01-01T00:00:00Z',
-                source_policy_key: 'POL123456',
-                policy_end_date: '2024-12-31T00:00:00Z',
-                claims: [
-                    {
-                        claimDate: '2023-03-15T00:00:00Z',
-                        closeDate: null,
-                        claimNumber: 'CLM123456'
-                    },
-                    {
-                        claimDate: null,
-                        closeDate: '2023-05-20T00:00:00Z',
-                        claimNumber: 'CLM654321'
-                    }
-                ]
-            },
-            {
-                policy_start_date: '2021-06-01T00:00:00Z',
-                source_policy_key: 'POL654321',
-                policy_end_date: '2025-05-15T00:00:00Z',
-                claims: [
-                    {
-                        claimDate: '2022-08-25T00:00:00Z',
-                        closeDate: null,
-                        claimNumber: 'CLM789012'
-                    },
-                    {
-                        claimDate: null,
-                        closeDate: '2023-01-30T00:00:00Z',
-                        claimNumber: 'CLM210987'
-                    }
-                ]
-            }
-        ],
+        policies: mockCustomerPolicies,
         fnols: [
             {
                 incident_datetime: '2023-01-01T10:00:00Z',
@@ -256,6 +190,7 @@ const mockCustomers = [
         vehicles: mockVehicles,
         complaints: mockCustomerComplaints,
         comms: mockCustomerComms,
+        aliases: mockAliases,
         invitations: [
             {
                 journey_date: '2023-01-15T00:00:00Z',
@@ -344,6 +279,7 @@ const mockCustomers = [
             { id: 8, customer_type: 'BUSINESS', organisation_name: 'Creative Works LLC', start_date: '2023-01-10', is_valid: true, addresses: [{ full_address: '505 Aspen St, City, Country', preferred: true, latitude: '40.7306', longitude: '-73.9352', country: 'USA' }] },
             { id: 9, customer_type: 'BUSINESS', organisation_name: 'Enterprise Holdings', start_date: '2021-09-22', is_valid: true, addresses: [{ full_address: '606 Fir St, City, Country', preferred: true, latitude: '32.7157', longitude: '-117.1611', country: 'USA' }] }
         ],
+        aliases: mockAliases,
         vehicles: mockVehicles,
         complaints: mockCustomerComplaints,
         comms: mockCustomerComms,
@@ -365,42 +301,7 @@ const mockCustomers = [
                 product_sub_type: 'Car'
             }
         ],
-        policies: [
-            {
-                policy_start_date: '2022-01-01T00:00:00Z',
-                source_policy_key: 'POL123456',
-                policy_end_date: '2024-12-31T00:00:00Z',
-                claims: [
-                    {
-                        claimDate: '2023-03-15T00:00:00Z',
-                        closeDate: null,
-                        claimNumber: 'CLM123456'
-                    },
-                    {
-                        claimDate: null,
-                        closeDate: '2023-05-20T00:00:00Z',
-                        claimNumber: 'CLM654321'
-                    }
-                ]
-            },
-            {
-                policy_start_date: '2021-06-01T00:00:00Z',
-                source_policy_key: 'POL654321',
-                policy_end_date: '2025-05-15T00:00:00Z',
-                claims: [
-                    {
-                        claimDate: '2022-08-25T00:00:00Z',
-                        closeDate: null,
-                        claimNumber: 'CLM789012'
-                    },
-                    {
-                        claimDate: null,
-                        closeDate: '2023-01-30T00:00:00Z',
-                        claimNumber: 'CLM210987'
-                    }
-                ]
-            }
-        ],
+        policies: mockCustomerPolicies,
         fnols: [
             {
                 incident_datetime: '2023-01-01T10:00:00Z',
@@ -439,6 +340,7 @@ const mockCustomers = [
         vehicles: mockVehicles,
         complaints: mockCustomerComplaints,
         comms: mockCustomerComms,
+        aliases: mockAliases,
         invitations: [
             {
                 journey_date: '2023-01-15T00:00:00Z',
@@ -533,6 +435,7 @@ const mockCustomers = [
         vehicles: mockVehicles,
         complaints: mockCustomerComplaints,
         comms: mockCustomerComms,
+        aliases: mockAliases,
         invitations: [
             {
                 journey_date: '2023-01-15T00:00:00Z',
@@ -551,42 +454,7 @@ const mockCustomers = [
                 product_sub_type: 'Car'
             }
         ],
-        policies: [
-            {
-                policy_start_date: '2022-01-01T00:00:00Z',
-                source_policy_key: 'POL123456',
-                policy_end_date: '2024-12-31T00:00:00Z',
-                claims: [
-                    {
-                        claimDate: '2023-03-15T00:00:00Z',
-                        closeDate: null,
-                        claimNumber: 'CLM123456'
-                    },
-                    {
-                        claimDate: null,
-                        closeDate: '2023-05-20T00:00:00Z',
-                        claimNumber: 'CLM654321'
-                    }
-                ]
-            },
-            {
-                policy_start_date: '2021-06-01T00:00:00Z',
-                source_policy_key: 'POL654321',
-                policy_end_date: '2025-05-15T00:00:00Z',
-                claims: [
-                    {
-                        claimDate: '2022-08-25T00:00:00Z',
-                        closeDate: null,
-                        claimNumber: 'CLM789012'
-                    },
-                    {
-                        claimDate: null,
-                        closeDate: '2023-01-30T00:00:00Z',
-                        claimNumber: 'CLM210987'
-                    }
-                ]
-            }
-        ],
+        policies: mockCustomerPolicies,
         fnols: [
             {
                 incident_datetime: '2023-01-01T10:00:00Z',
@@ -640,42 +508,7 @@ const mockCustomers = [
                 product_sub_type: 'Car'
             }
         ],
-        policies: [
-            {
-                policy_start_date: '2022-01-01T00:00:00Z',
-                source_policy_key: 'POL123456',
-                policy_end_date: '2024-12-31T00:00:00Z',
-                claims: [
-                    {
-                        claimDate: '2023-03-15T00:00:00Z',
-                        closeDate: null,
-                        claimNumber: 'CLM123456'
-                    },
-                    {
-                        claimDate: null,
-                        closeDate: '2023-05-20T00:00:00Z',
-                        claimNumber: 'CLM654321'
-                    }
-                ]
-            },
-            {
-                policy_start_date: '2021-06-01T00:00:00Z',
-                source_policy_key: 'POL654321',
-                policy_end_date: '2025-05-15T00:00:00Z',
-                claims: [
-                    {
-                        claimDate: '2022-08-25T00:00:00Z',
-                        closeDate: null,
-                        claimNumber: 'CLM789012'
-                    },
-                    {
-                        claimDate: null,
-                        closeDate: '2023-01-30T00:00:00Z',
-                        claimNumber: 'CLM210987'
-                    }
-                ]
-            }
-        ],
+        policies: mockCustomerPolicies,
         fnols: [
             {
                 incident_datetime: '2023-01-01T10:00:00Z',
@@ -710,6 +543,7 @@ const mockCustomers = [
             { id: 7, customer_type: 'BUSINESS', organisation_name: 'Global Industries Inc', start_date: '2022-08-15', is_valid: true, addresses: [] }
         ],
         vehicles: mockVehicles,
+        aliases: mockAliases,
         complaints: mockCustomerComplaints,
         comms: mockCustomerComms,
         invitations: [
@@ -730,42 +564,7 @@ const mockCustomers = [
                 product_sub_type: 'Car'
             }
         ],
-        policies: [
-            {
-                policy_start_date: '2022-01-01T00:00:00Z',
-                source_policy_key: 'POL123456',
-                policy_end_date: '2024-12-31T00:00:00Z',
-                claims: [
-                    {
-                        claimDate: '2023-03-15T00:00:00Z',
-                        closeDate: null,
-                        claimNumber: 'CLM123456'
-                    },
-                    {
-                        claimDate: null,
-                        closeDate: '2023-05-20T00:00:00Z',
-                        claimNumber: 'CLM654321'
-                    }
-                ]
-            },
-            {
-                policy_start_date: '2021-06-01T00:00:00Z',
-                source_policy_key: 'POL654321',
-                policy_end_date: '2025-05-15T00:00:00Z',
-                claims: [
-                    {
-                        claimDate: '2022-08-25T00:00:00Z',
-                        closeDate: null,
-                        claimNumber: 'CLM789012'
-                    },
-                    {
-                        claimDate: null,
-                        closeDate: '2023-01-30T00:00:00Z',
-                        claimNumber: 'CLM210987'
-                    }
-                ]
-            }
-        ],
+        policies: mockCustomerPolicies,
         fnols: [
             {
                 incident_datetime: '2023-01-01T10:00:00Z',
@@ -801,6 +600,7 @@ const mockCustomers = [
         vehicles: mockVehicles,
         comms: mockCustomerComms,
         complaints: mockCustomerComplaints,
+        aliases: mockAliases,
         invitations: [
             {
                 journey_date: '2023-01-15T00:00:00Z',
@@ -819,42 +619,7 @@ const mockCustomers = [
                 product_sub_type: 'Car'
             }
         ],
-        policies: [
-            {
-                policy_start_date: '2022-01-01T00:00:00Z',
-                source_policy_key: 'POL123456',
-                policy_end_date: '2024-12-31T00:00:00Z',
-                claims: [
-                    {
-                        claimDate: '2023-03-15T00:00:00Z',
-                        closeDate: null,
-                        claimNumber: 'CLM123456'
-                    },
-                    {
-                        claimDate: null,
-                        closeDate: '2023-05-20T00:00:00Z',
-                        claimNumber: 'CLM654321'
-                    }
-                ]
-            },
-            {
-                policy_start_date: '2021-06-01T00:00:00Z',
-                source_policy_key: 'POL654321',
-                policy_end_date: '2025-05-15T00:00:00Z',
-                claims: [
-                    {
-                        claimDate: '2022-08-25T00:00:00Z',
-                        closeDate: null,
-                        claimNumber: 'CLM789012'
-                    },
-                    {
-                        claimDate: null,
-                        closeDate: '2023-01-30T00:00:00Z',
-                        claimNumber: 'CLM210987'
-                    }
-                ]
-            }
-        ],
+        policies: mockCustomerPolicies,
         fnols: [
             {
                 incident_datetime: '2023-01-01T10:00:00Z',
