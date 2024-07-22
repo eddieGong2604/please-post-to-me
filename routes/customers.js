@@ -7,6 +7,7 @@ import mockCustomerComplaints from "../data/mockCustomerComplaints.js";
 import mockCustomerComms from "../data/mockCustomerComms.js";
 import mockCustomerPolicies from "../data/mockCustomerPolicies.js";
 import mockCustomerRelations from "../data/mockCustomerRelations.js";
+import mockVehicles from "../data/mockCustomerVehicles.js";
 
 const router = express.Router();
 const findCustomerById = (id) => mockCustomers.find(c => c.id === parseInt(id));
@@ -44,7 +45,7 @@ router.get('/:id/addresses', (req, res) => {
 router.get('/:id/vehicles', (req, res) => {
     const customer = findCustomerById(req.params.id);
     if (customer) {
-        res.json({ vehicles: customer.vehicles });
+        res.json({ vehicles: mockVehicles });
     } else {
         res.status(404).json({ error: 'Customer not found' });
     }
