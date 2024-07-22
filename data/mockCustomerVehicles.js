@@ -4,6 +4,7 @@ const mockVehicles = [
         year: 2020,
         make: 'Toyota',
         model: 'Camry',
+        
         policies: [
             {
                 policy_status: "CURRENT",
