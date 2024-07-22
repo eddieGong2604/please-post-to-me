@@ -1,10 +1,5 @@
 import mockVehicles from "./mockCustomerVehicles.js";
-import mockCustomerComms from "./mockCustomerComms.js";
-import mockCustomerComplaints from "./mockCustomerComplaints.js";
 import mockAliases from "./mockCustomerAliases.js";
-import mockCustomerPolicies from "./mockCustomerPolicies.js";
-import mockCustomerRelations from "./mockCustomerRelations.js";
-import mockCustomerOnlineActivities from "./mockCustomerOnlineActivities.js";
 
 const mockCustomers = [
     // INDIVIDUAL customers
@@ -22,91 +17,8 @@ const mockCustomers = [
             { full_address: '123 Main St, City, Country', preferred: true, latitude: '40.7128', longitude: '-74.0060', country: 'USA' },
             { full_address: '124 Main St, City, Country', preferred: false, country: 'USA' }
         ],
-        relations: mockCustomerRelations,
         vehicles: mockVehicles,
         aliases: mockAliases,
-        complaints: [
-            {
-                complaint_category_type: 'Product Quality',
-                complaint_level: 'High',
-                complaint_harmonized_brand: 'Brand A',
-                complaint_portfolio: 'Portfolio 1',
-                harmonized_outcome: 'Resolved',
-                complaint_received_date: '2023-01-15T00:00:00Z',
-                complaint_finalised_date: '2023-02-01T00:00:00Z'
-            },
-            {
-                complaint_category_type: 'Service Delay',
-                complaint_level: 'Medium',
-                complaint_harmonized_brand: 'Brand B',
-                complaint_portfolio: 'Portfolio 2',
-                harmonized_outcome: 'Pending',
-                complaint_received_date: '2023-03-10T00:00:00Z',
-                complaint_finalised_date: null
-            },
-            {
-                complaint_category_type: 'Billing Issue',
-                complaint_level: 'Low',
-                complaint_harmonized_brand: 'Brand C',
-                complaint_portfolio: 'Portfolio 3',
-                harmonized_outcome: 'Resolved',
-                complaint_received_date: '2023-04-05T00:00:00Z',
-                complaint_finalised_date: '2023-04-20T00:00:00Z'
-            },
-            {
-                complaint_category_type: 'Product Defect',
-                complaint_level: 'High',
-                complaint_harmonized_brand: 'Brand D',
-                complaint_portfolio: 'Portfolio 4',
-                harmonized_outcome: 'Unresolved',
-                complaint_received_date: '2023-05-22T00:00:00Z',
-                complaint_finalised_date: '2023-06-15T00:00:00Z'
-            },
-            {
-                complaint_category_type: 'Customer Service',
-                complaint_level: 'Medium',
-                complaint_harmonized_brand: 'Brand E',
-                complaint_portfolio: 'Portfolio 5',
-                harmonized_outcome: 'Pending',
-                complaint_received_date: '2023-07-01T00:00:00Z',
-                complaint_finalised_date: null
-            }
-        ],
-        comms: mockCustomerComms,
-        activities: mockCustomerOnlineActivities,
-        invitations: [
-            {
-                journey_date: '2023-01-15T00:00:00Z',
-                journey: 'Onboarding',
-                touchpoint: 'Email',
-                brand: 'Brand A',
-                product_type: 'Insurance',
-                product_sub_type: 'Health'
-            },
-            {
-                journey_date: '2023-02-20T00:00:00Z',
-                journey: 'Renewal',
-                touchpoint: 'Phone Call',
-                brand: 'Brand B',
-                product_type: 'Insurance',
-                product_sub_type: 'Car'
-            }
-        ],
-        policies: mockCustomerPolicies,
-        fnols: [
-            {
-                incident_datetime: '2023-01-01T10:00:00Z',
-                severity: 'High',
-                incident_address: '123 Elm St, City, Country',
-                _id: 'FNOL123'
-            },
-            {
-                incident_datetime: '2023-02-15T15:30:00Z',
-                severity: 'Medium',
-                incident_address: '456 Maple St, City, Country',
-                _id: 'FNOL456'
-            }
-        ]
     },
     {
         id: 2,
@@ -121,46 +33,8 @@ const mockCustomers = [
         addresses: [
             { full_address: '456 Oak St, City, Country', preferred: true, latitude: '34.0522', longitude: '-118.2437', country: 'USA' }
         ],
-        relations: mockCustomerRelations,
         vehicles: mockVehicles,
-        complaints: mockCustomerComplaints,
-        comms: mockCustomerComms,
         aliases: mockAliases,
-        invitations: [
-            {
-                journey_date: '2023-01-15T00:00:00Z',
-                journey: 'Onboarding',
-                touchpoint: 'Email',
-                brand: 'Brand A',
-                product_type: 'Insurance',
-                product_sub_type: 'Health'
-            },
-            {
-                journey_date: '2023-02-20T00:00:00Z',
-                journey: 'Renewal',
-                touchpoint: 'Phone Call',
-                brand: 'Brand B',
-                product_type: 'Insurance',
-                product_sub_type: 'Car'
-            }
-        ],
-        policies: mockCustomerPolicies,
-        activities: mockCustomerOnlineActivities,
-        fnols: [
-            {
-                incident_datetime: '2023-01-01T10:00:00Z',
-                severity: 'High',
-                incident_address: '123 Elm St, City, Country',
-                _id: 'FNOL123'
-            },
-            {
-                incident_datetime: '2023-02-15T15:30:00Z',
-                severity: 'Medium',
-                incident_address: '456 Maple St, City, Country',
-                _id: 'FNOL456'
-            }
-        ]
-
     },
     {
         id: 3,
@@ -175,82 +49,8 @@ const mockCustomers = [
         addresses: [
             { full_address: '789 Pine St, City, Country', preferred: true, latitude: '37.7749', longitude: '-122.4194', country: 'USA' }
         ],
-        relations: mockCustomerRelations,
         vehicles: mockVehicles,
-        complaints: mockCustomerComplaints,
-        comms: mockCustomerComms,
-        activities: mockCustomerOnlineActivities,
         aliases: mockAliases,
-        invitations: [
-            {
-                journey_date: '2023-01-15T00:00:00Z',
-                journey: 'Onboarding',
-                touchpoint: 'Email',
-                brand: 'Brand A',
-                product_type: 'Insurance',
-                product_sub_type: 'Health'
-            },
-            {
-                journey_date: '2023-02-20T00:00:00Z',
-                journey: 'Renewal',
-                touchpoint: 'Phone Call',
-                brand: 'Brand B',
-                product_type: 'Insurance',
-                product_sub_type: 'Car'
-            }
-        ],
-        policies: [
-            {
-                policy_start_date: '2022-01-01T00:00:00Z',
-                source_policy_key: 'POL123456',
-                policy_end_date: '2024-12-31T00:00:00Z',
-                claims: [
-                    {
-                        claimDate: '2023-03-15T00:00:00Z',
-                        closeDate: null,
-                        claimNumber: 'CLM123456'
-                    },
-                    {
-                        claimDate: null,
-                        closeDate: '2023-05-20T00:00:00Z',
-                        claimNumber: 'CLM654321'
-                    }
-                ]
-            },
-            {
-                policy_start_date: '2021-06-01T00:00:00Z',
-                source_policy_key: 'POL654321',
-                policy_end_date: '2025-05-15T00:00:00Z',
-                claims: [
-                    {
-                        claimDate: '2022-08-25T00:00:00Z',
-                        closeDate: null,
-                        claimNumber: 'CLM789012'
-                    },
-                    {
-                        claimDate: null,
-                        closeDate: '2023-01-30T00:00:00Z',
-                        claimNumber: 'CLM210987'
-                    }
-                ]
-            }
-        ],
-        fnols: [
-            {
-                incident_datetime: '2023-01-01T10:00:00Z',
-                severity: 'High',
-                incident_address: '123 Elm St, City, Country',
-                _id: 'FNOL123'
-            },
-            {
-                incident_datetime: '2023-02-15T15:30:00Z',
-                severity: 'Medium',
-                incident_address: '456 Maple St, City, Country',
-                _id: 'FNOL456'
-            }
-        ]
-
-
     },
     {
         id: 4,
@@ -263,48 +63,8 @@ const mockCustomers = [
         start_date: '2021-07-20T00:00:00.000Z',
         is_valid: true,
         addresses: [],
-        relations: mockCustomerRelations,
         aliases: mockAliases,
         vehicles: mockVehicles,
-        complaints: mockCustomerComplaints,
-        activities: mockCustomerOnlineActivities,
-        comms: mockCustomerComms,
-        invitations: [
-            {
-                journey_date: '2023-01-15T00:00:00Z',
-                journey: 'Onboarding',
-                touchpoint: 'Email',
-                brand: 'Brand A',
-                product_type: 'Insurance',
-                product_sub_type: 'Health'
-            },
-            {
-                journey_date: '2023-02-20T00:00:00Z',
-                journey: 'Renewal',
-                touchpoint: 'Phone Call',
-                brand: 'Brand B',
-                product_type: 'Insurance',
-                product_sub_type: 'Car'
-            }
-        ],
-        policies: mockCustomerPolicies,
-        fnols: [
-            {
-                incident_datetime: '2023-01-01T10:00:00Z',
-                severity: 'High',
-                incident_address: '123 Elm St, City, Country',
-                _id: 'FNOL123'
-            },
-            {
-                incident_datetime: '2023-02-15T15:30:00Z',
-                severity: 'Medium',
-                incident_address: '456 Maple St, City, Country',
-                _id: 'FNOL456'
-            }
-        ]
-
-
-
     },
     {
         id: 5,
@@ -317,83 +77,8 @@ const mockCustomers = [
         start_date: '2024-11-05T00:00:00.000Z',
         is_valid: false,
         addresses: [],
-        relations: mockCustomerRelations,
         vehicles: mockVehicles,
-        complaints: mockCustomerComplaints,
-        comms: mockCustomerComms,
-        activities: mockCustomerOnlineActivities,
         aliases: mockAliases,
-        invitations: [
-            {
-                journey_date: '2023-01-15T00:00:00Z',
-                journey: 'Onboarding',
-                touchpoint: 'Email',
-                brand: 'Brand A',
-                product_type: 'Insurance',
-                product_sub_type: 'Health'
-            },
-            {
-                journey_date: '2023-02-20T00:00:00Z',
-                journey: 'Renewal',
-                touchpoint: 'Phone Call',
-                brand: 'Brand B',
-                product_type: 'Insurance',
-                product_sub_type: 'Car'
-            }
-        ],
-        policies: [
-            {
-                policy_start_date: '2022-01-01T00:00:00Z',
-                source_policy_key: 'POL123456',
-                policy_end_date: '2024-12-31T00:00:00Z',
-                claims: [
-                    {
-                        claimDate: '2023-03-15T00:00:00Z',
-                        closeDate: null,
-                        claimNumber: 'CLM123456'
-                    },
-                    {
-                        claimDate: null,
-                        closeDate: '2023-05-20T00:00:00Z',
-                        claimNumber: 'CLM654321'
-                    }
-                ]
-            },
-            {
-                policy_start_date: '2021-06-01T00:00:00Z',
-                source_policy_key: 'POL654321',
-                policy_end_date: '2025-05-15T00:00:00Z',
-                claims: [
-                    {
-                        claimDate: '2022-08-25T00:00:00Z',
-                        closeDate: null,
-                        claimNumber: 'CLM789012'
-                    },
-                    {
-                        claimDate: null,
-                        closeDate: '2023-01-30T00:00:00Z',
-                        claimNumber: 'CLM210987'
-                    }
-                ]
-            }
-        ],
-        fnols: [
-            {
-                incident_datetime: '2023-01-01T10:00:00Z',
-                severity: 'High',
-                incident_address: '123 Elm St, City, Country',
-                _id: 'FNOL123'
-            },
-            {
-                incident_datetime: '2023-02-15T15:30:00Z',
-                severity: 'Medium',
-                incident_address: '456 Maple St, City, Country',
-                _id: 'FNOL456'
-            }
-        ]
-
-
-
     },
 
     // BUSINESS customers
@@ -408,47 +93,8 @@ const mockCustomers = [
         addresses: [
             { full_address: '303 Cedar St, City, Country', preferred: true, latitude: '36.1699', longitude: '-115.1398', country: 'USA' }
         ],
-        relations: mockCustomerRelations,
         vehicles: mockVehicles,
-        complaints: mockCustomerComplaints,
-        activities: mockCustomerOnlineActivities,
-        comms: mockCustomerComms,
         aliases: mockAliases,
-        invitations: [
-            {
-                journey_date: '2023-01-15T00:00:00Z',
-                journey: 'Onboarding',
-                touchpoint: 'Email',
-                brand: 'Brand A',
-                product_type: 'Insurance',
-                product_sub_type: 'Health'
-            },
-            {
-                journey_date: '2023-02-20T00:00:00Z',
-                journey: 'Renewal',
-                touchpoint: 'Phone Call',
-                brand: 'Brand B',
-                product_type: 'Insurance',
-                product_sub_type: 'Car'
-            }
-        ],
-        policies: mockCustomerPolicies,
-        fnols: [
-            {
-                incident_datetime: '2023-01-01T10:00:00Z',
-                severity: 'High',
-                incident_address: '123 Elm St, City, Country',
-                _id: 'FNOL123'
-            },
-            {
-                incident_datetime: '2023-02-15T15:30:00Z',
-                severity: 'Medium',
-                incident_address: '456 Maple St, City, Country',
-                _id: 'FNOL456'
-            }
-        ]
-
-
     },
     {
         id: 7,
@@ -459,45 +105,7 @@ const mockCustomers = [
         start_date: '2022-08-15T00:00:00.000Z',
         is_valid: true,
         addresses: [],
-        relations: mockCustomerRelations,
         vehicles: mockVehicles,
-        complaints: mockCustomerComplaints,
-        comms: mockCustomerComms,
-        activities: mockCustomerOnlineActivities,
-        invitations: [
-            {
-                journey_date: '2023-01-15T00:00:00Z',
-                journey: 'Onboarding',
-                touchpoint: 'Email',
-                brand: 'Brand A',
-                product_type: 'Insurance',
-                product_sub_type: 'Health'
-            },
-            {
-                journey_date: '2023-02-20T00:00:00Z',
-                journey: 'Renewal',
-                touchpoint: 'Phone Call',
-                brand: 'Brand B',
-                product_type: 'Insurance',
-                product_sub_type: 'Car'
-            }
-        ],
-        policies: mockCustomerPolicies,
-        fnols: [
-            {
-                incident_datetime: '2023-01-01T10:00:00Z',
-                severity: 'High',
-                incident_address: '123 Elm St, City, Country',
-                _id: 'FNOL123'
-            },
-            {
-                incident_datetime: '2023-02-15T15:30:00Z',
-                severity: 'Medium',
-                incident_address: '456 Maple St, City, Country',
-                _id: 'FNOL456'
-            }
-        ]
-
     },
     {
         id: 8,
@@ -510,45 +118,8 @@ const mockCustomers = [
         addresses: [
             { full_address: '505 Aspen St, City, Country', preferred: true, latitude: '40.7306', longitude: '-73.9352', country: 'USA' }
         ],
-        relations: mockCustomerRelations,
-        activities: mockCustomerOnlineActivities,
         vehicles: mockVehicles,
         aliases: mockAliases,
-        complaints: mockCustomerComplaints,
-        comms: mockCustomerComms,
-        invitations: [
-            {
-                journey_date: '2023-01-15T00:00:00Z',
-                journey: 'Onboarding',
-                touchpoint: 'Email',
-                brand: 'Brand A',
-                product_type: 'Insurance',
-                product_sub_type: 'Health'
-            },
-            {
-                journey_date: '2023-02-20T00:00:00Z',
-                journey: 'Renewal',
-                touchpoint: 'Phone Call',
-                brand: 'Brand B',
-                product_type: 'Insurance',
-                product_sub_type: 'Car'
-            }
-        ],
-        policies: mockCustomerPolicies,
-        fnols: [
-            {
-                incident_datetime: '2023-01-01T10:00:00Z',
-                severity: 'High',
-                incident_address: '123 Elm St, City, Country',
-                _id: 'FNOL123'
-            },
-            {
-                incident_datetime: '2023-02-15T15:30:00Z',
-                severity: 'Medium',
-                incident_address: '456 Maple St, City, Country',
-                _id: 'FNOL456'
-            }
-        ]
     },
     {
         id: 9,
@@ -561,45 +132,8 @@ const mockCustomers = [
         addresses: [
             { full_address: '606 Fir St, City, Country', preferred: true, latitude: '32.7157', longitude: '-117.1611', country: 'USA' }
         ],
-        relations: mockCustomerRelations,
         vehicles: mockVehicles,
-        comms: mockCustomerComms,
-        complaints: mockCustomerComplaints,
         aliases: mockAliases,
-        activities: mockCustomerOnlineActivities,
-        invitations: [
-            {
-                journey_date: '2023-01-15T00:00:00Z',
-                journey: 'Onboarding',
-                touchpoint: 'Email',
-                brand: 'Brand A',
-                product_type: 'Insurance',
-                product_sub_type: 'Health'
-            },
-            {
-                journey_date: '2023-02-20T00:00:00Z',
-                journey: 'Renewal',
-                touchpoint: 'Phone Call',
-                brand: 'Brand B',
-                product_type: 'Insurance',
-                product_sub_type: 'Car'
-            }
-        ],
-        policies: mockCustomerPolicies,
-        fnols: [
-            {
-                incident_datetime: '2023-01-01T10:00:00Z',
-                severity: 'High',
-                incident_address: '123 Elm St, City, Country',
-                _id: 'FNOL123'
-            },
-            {
-                incident_datetime: '2023-02-15T15:30:00Z',
-                severity: 'Medium',
-                incident_address: '456 Maple St, City, Country',
-                _id: 'FNOL456'
-            }
-        ]
     }
 ];
 

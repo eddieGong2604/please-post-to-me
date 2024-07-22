@@ -1,5 +1,12 @@
 import express from 'express';
 import mockCustomers from '../data/mockCustomers.js';
+import mockCustomerOnlineActivities from "../data/mockCustomerOnlineActivities.js";
+import mockCustomerInvitations from "../data/mockCustomerInvitations.js";
+import mockCustomerFnols from "../data/mockCustomerFnols.js";
+import mockCustomerComplaints from "../data/mockCustomerComplaints.js";
+import mockCustomerComms from "../data/mockCustomerComms.js";
+import mockCustomerPolicies from "../data/mockCustomerPolicies.js";
+import mockCustomerRelations from "../data/mockCustomerRelations.js";
 
 const router = express.Router();
 const findCustomerById = (id) => mockCustomers.find(c => c.id === parseInt(id));
@@ -8,7 +15,6 @@ router.get('/', (req, res) => {
     res.json({ customers: mockCustomers });
 });
 
-// Get a single customer by ID
 router.get('/:id', (req, res) => {
     const customer = findCustomerById(req.params.id);
     if (customer) {
@@ -18,17 +24,15 @@ router.get('/:id', (req, res) => {
     }
 });
 router.get('/:id/relations', (req, res) => {
-    // Mock data: return 2 individual and 2 business customers
     const customer = findCustomerById(req.params.id);
     if (customer) {
-        res.json({ relations: customer.relations });
+        res.json({ relations: mockCustomerRelations });
     } else {
         res.status(404).json({ error: 'Customer not found' });
     }
 });
 
 router.get('/:id/addresses', (req, res) => {
-    // Mock data: return 2 individual and 2 business customers
     const customer = findCustomerById(req.params.id);
     if (customer) {
         res.json({ addresses: customer.addresses });
@@ -38,7 +42,6 @@ router.get('/:id/addresses', (req, res) => {
 });
 
 router.get('/:id/vehicles', (req, res) => {
-    // Mock data: return 2 individual and 2 business customers
     const customer = findCustomerById(req.params.id);
     if (customer) {
         res.json({ vehicles: customer.vehicles });
@@ -48,10 +51,9 @@ router.get('/:id/vehicles', (req, res) => {
 });
 
 router.get('/:id/complaints', (req, res) => {
-    // Mock data: return 2 individual and 2 business customers
     const customer = findCustomerById(req.params.id);
     if (customer) {
-        res.json({ complaints: customer.complaints });
+        res.json({ complaints: mockCustomerComplaints });
     } else {
         res.status(404).json({ error: 'Customer not found' });
     }
@@ -59,50 +61,45 @@ router.get('/:id/complaints', (req, res) => {
 
 
 router.get('/:id/comms', (req, res) => {
-    // Mock data: return 2 individual and 2 business customers
     const customer = findCustomerById(req.params.id);
     if (customer) {
-        res.json({ comms: customer.comms });
+        res.json({ comms: mockCustomerComms });
     } else {
         res.status(404).json({ error: 'Customer not found' });
     }
 });
 
 router.get('/:id/policies', (req, res) => {
-    // Mock data: return 2 individual and 2 business customers
     const customer = findCustomerById(req.params.id);
     if (customer) {
-        res.json({ policies: customer.policies });
+        res.json({ policies: mockCustomerPolicies });
     } else {
         res.status(404).json({ error: 'Customer not found' });
     }
 });
 
 router.get('/:id/sj-fnols', (req, res) => {
-    // Mock data: return 2 individual and 2 business customers
     const customer = findCustomerById(req.params.id);
     if (customer) {
-        res.json({ fnols: customer.fnols });
+        res.json({ fnols: mockCustomerFnols });
     } else {
         res.status(404).json({ error: 'Customer not found' });
     }
 });
 
 router.get('/:id/invitations', (req, res) => {
-    // Mock data: return 2 individual and 2 business customers
     const customer = findCustomerById(req.params.id);
     if (customer) {
-        res.json({ invitations: customer.invitations });
+        res.json({ invitations: mockCustomerInvitations });
     } else {
         res.status(404).json({ error: 'Customer not found' });
     }
 });
 
 router.get('/:id/online-activities', (req, res) => {
-    // Mock data: return 2 individual and 2 business customers
     const customer = findCustomerById(req.params.id);
     if (customer) {
-        res.json({ activities: customer.activities });
+        res.json({ activities: mockCustomerOnlineActivities });
     } else {
         res.status(404).json({ error: 'Customer not found' });
     }
