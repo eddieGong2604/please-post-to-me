@@ -1,4 +1,3 @@
-import mockVehicles from "./mockCustomerVehicles.js";
 import mockAliases from "./mockCustomerAliases.js";
 
 const mockCustomers = [
