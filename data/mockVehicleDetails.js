@@ -21,6 +21,18 @@ const mockVehicleDetail = {
             ],
         },
     ],
+    claims: [
+        {
+            claimDate: '2021-08-25T00:00:00Z',
+            natureOfLoss: 'Fire',
+            closeDate: null
+        },
+        {
+            claimDate: '2023-01-15T00:00:00Z',
+            natureOfLoss: 'Vandalism',
+            closeDate: '2023-02-15T00:00:00Z'
+        }
+    ]
 };
 
 export default mockVehicleDetail;
