@@ -14,6 +14,12 @@ const mockAliases = [
                 contact_country_code: 'AUS'
             },
             {
+                contact_method: 'PHONE',
+                contact_value: '555-5678',
+                contact_qualifier: 'MP',
+                contact_country_code: 'AUS'
+            },
+            {
                 contact_method: 'EMAIL',
                 contact_value: 'john.doe@example.com',
                 contact_qualifier: null,
