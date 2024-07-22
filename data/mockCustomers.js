@@ -17,6 +17,7 @@ const mockCustomers = [
             { full_address: '124 Main St, City, Country', preferred: false, country: 'USA' }
         ],
         aliases: mockAliases,
+        customer_keys: ["CMDM-IAG412512421523","PMS-IAG234235234234","CMDM-IAG524346456456"]
     },
     {
         id: 2,
@@ -32,6 +33,7 @@ const mockCustomers = [
             { full_address: '456 Oak St, City, Country', preferred: true, latitude: '34.0522', longitude: '-118.2437', country: 'USA' }
         ],
         aliases: mockAliases,
+        customer_keys: ["CMDM-IAG412512421523","PMS-IAG234235234234"]
     },
     {
         id: 3,
@@ -47,6 +49,7 @@ const mockCustomers = [
             { full_address: '789 Pine St, City, Country', preferred: true, latitude: '37.7749', longitude: '-122.4194', country: 'USA' }
         ],
         aliases: mockAliases,
+        customer_keys: ["CMDM-IAG412512421523","PMS-IAG234235234234"]
     },
     {
         id: 4,
@@ -60,6 +63,7 @@ const mockCustomers = [
         is_valid: true,
         addresses: [],
         aliases: mockAliases,
+        customer_keys: ["CMDM-IAG412512421523","PMS-IAG234235234234"]
     },
     {
         id: 5,
@@ -73,6 +77,7 @@ const mockCustomers = [
         is_valid: false,
         addresses: [],
         aliases: mockAliases,
+        customer_keys: ["CMDM-IAG412512421523","PMS-IAG234235234234"]
     },
 
     // BUSINESS customers
@@ -88,6 +93,7 @@ const mockCustomers = [
             { full_address: '303 Cedar St, City, Country', preferred: true, latitude: '36.1699', longitude: '-115.1398', country: 'USA' }
         ],
         aliases: mockAliases,
+        customer_keys: ["CMDM-IAG412512421523","PMS-IAG234235234234"]
     },
     {
         id: 7,
@@ -98,6 +104,7 @@ const mockCustomers = [
         start_date: '2022-08-15T00:00:00.000Z',
         is_valid: true,
         addresses: [],
+        customer_keys: ["CMDM-IAG412512421523","PMS-IAG234235234234"]
     },
     {
         id: 8,
@@ -111,6 +118,7 @@ const mockCustomers = [
             { full_address: '505 Aspen St, City, Country', preferred: true, latitude: '40.7306', longitude: '-73.9352', country: 'USA' }
         ],
         aliases: mockAliases,
+        customer_keys: ["CMDM-IAG412512421523","PMS-IAG234235234234"]
     },
     {
         id: 9,
@@ -124,6 +132,7 @@ const mockCustomers = [
             { full_address: '606 Fir St, City, Country', preferred: true, latitude: '32.7157', longitude: '-117.1611', country: 'USA' }
         ],
         aliases: mockAliases,
+        customer_keys: ["CMDM-IAG412512421523","PMS-IAG234235234234"]
     }
 ];
 

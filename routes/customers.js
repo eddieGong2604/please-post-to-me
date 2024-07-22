@@ -8,6 +8,7 @@ import mockCustomerComms from "../data/mockCustomerComms.js";
 import mockCustomerPolicies from "../data/mockCustomerPolicies.js";
 import mockCustomerRelations from "../data/mockCustomerRelations.js";
 import mockVehicles from "../data/mockCustomerVehicles.js";
+import mockJourneyInteractions from "../data/mockCustomerJourneyInteractions.js";
 
 const router = express.Router();
 const findCustomerById = (id) => mockCustomers.find(c => c.id === parseInt(id));
@@ -105,5 +106,7 @@ router.get('/:id/online-activities', (req, res) => {
         res.status(404).json({ error: 'Customer not found' });
     }
 });
+
+
 
 export default router;
