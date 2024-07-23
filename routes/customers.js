@@ -1,6 +1,15 @@
 import express from "express";
 import mockCustomers from "../data/mockCustomers.js";
 import middleware from "../middleware/index.js";
+import mockCustomerOnlineActivities from "../data/mockCustomerOnlineActivities.js";
+import mockCustomerInvitations from "../data/mockCustomerInvitations.js";
+import mockCustomerFnols from "../data/mockCustomerFnols.js";
+import mockCustomerComplaints from "../data/mockCustomerComplaints.js";
+import mockCustomerComms from "../data/mockCustomerComms.js";
+import mockCustomerPolicies from "../data/mockCustomerPolicies.js";
+import mockCustomerRelations from "../data/mockCustomerRelations.js";
+import mockVehicles from "../data/mockCustomerVehicles.js";
+import mockJourneyInteractions from "../data/mockCustomerJourneyInteractions.js";
 
 const router = express.Router();
 const findCustomerById = (id) =>
@@ -23,7 +32,7 @@ router.get("/:id/relations", middleware.authWeb, (req, res) => {
   // Mock data: return 2 individual and 2 business customers
   const customer = findCustomerById(req.params.id);
   if (customer) {
-    res.json({ relations: customer.relations });
+    res.json({ relations: mockCustomerRelations });
   } else {
     res.status(404).json({ error: "Customer not found" });
   }
@@ -43,7 +52,7 @@ router.get("/:id/vehicles", middleware.authWeb, (req, res) => {
   // Mock data: return 2 individual and 2 business customers
   const customer = findCustomerById(req.params.id);
   if (customer) {
-    res.json({ vehicles: customer.vehicles });
+    res.json({ vehicles: mockVehicles });
   } else {
     res.status(404).json({ error: "Customer not found" });
   }
@@ -53,7 +62,7 @@ router.get("/:id/complaints", middleware.authWeb, (req, res) => {
   // Mock data: return 2 individual and 2 business customers
   const customer = findCustomerById(req.params.id);
   if (customer) {
-    res.json({ complaints: customer.complaints });
+    res.json({ complaints: mockCustomerComplaints });
   } else {
     res.status(404).json({ error: "Customer not found" });
   }
@@ -63,7 +72,7 @@ router.get("/:id/comms", middleware.authWeb, (req, res) => {
   // Mock data: return 2 individual and 2 business customers
   const customer = findCustomerById(req.params.id);
   if (customer) {
-    res.json({ comms: customer.comms });
+    res.json({ comms: mockCustomerComms });
   } else {
     res.status(404).json({ error: "Customer not found" });
   }
@@ -73,7 +82,7 @@ router.get("/:id/policies", middleware.authWeb, (req, res) => {
   // Mock data: return 2 individual and 2 business customers
   const customer = findCustomerById(req.params.id);
   if (customer) {
-    res.json({ policies: customer.policies });
+    res.json({ policies: mockCustomerPolicies });
   } else {
     res.status(404).json({ error: "Customer not found" });
   }
@@ -83,7 +92,7 @@ router.get("/:id/sj-fnols", middleware.authWeb, (req, res) => {
   // Mock data: return 2 individual and 2 business customers
   const customer = findCustomerById(req.params.id);
   if (customer) {
-    res.json({ fnols: customer.fnols });
+    res.json({ fnols: mockCustomerFnols });
   } else {
     res.status(404).json({ error: "Customer not found" });
   }
@@ -93,10 +102,22 @@ router.get("/:id/invitations", middleware.authWeb, (req, res) => {
   // Mock data: return 2 individual and 2 business customers
   const customer = findCustomerById(req.params.id);
   if (customer) {
-    res.json({ invitations: customer.invitations });
+    res.json({ invitations: mockCustomerInvitations });
   } else {
     res.status(404).json({ error: "Customer not found" });
   }
 });
+
+
+router.get('/:id/online-activities', middleware.authWeb, (req, res) => {
+    const customer = findCustomerById(req.params.id);
+    if (customer) {
+        res.json({ activities: mockCustomerOnlineActivities });
+    } else {
+        res.status(404).json({ error: 'Customer not found' });
+    }
+});
+
+
 
 export default router;

@@ -4,8 +4,10 @@ const mockVehicles = [
         year: 2020,
         make: 'Toyota',
         model: 'Camry',
+        
         policies: [
             {
+                policy_status: "CURRENT",
                 customerRoles: [
                     {
                         activeFrom: '2020-01-01T00:00:00Z',
@@ -57,7 +59,8 @@ const mockVehicles = [
                 ],
                 source_policy_key: 'POL654321',
                 legal_entity: 'Insurance Co B',
-                policy_end_date: '2025-05-15T00:00:00Z'
+                policy_end_date: '2025-05-15T00:00:00Z',
+                policy_status: "CURRENT",
             }
         ],
         claims: [
