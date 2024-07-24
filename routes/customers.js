@@ -10,6 +10,7 @@ import mockCustomerPolicies from "../data/mockCustomerPolicies.js";
 import mockCustomerRelations from "../data/mockCustomerRelations.js";
 import mockVehicles from "../data/mockCustomerVehicles.js";
 import mockJourneyInteractions from "../data/mockCustomerJourneyInteractions.js";
+import mockCustomerAddresses from "../data/mockCustomerAddresses.js";
 
 const router = express.Router();
 const findCustomerById = (id) =>
@@ -42,7 +43,7 @@ router.get("/:id/addresses", middleware.authWeb, (req, res) => {
   // Mock data: return 2 individual and 2 business customers
   const customer = findCustomerById(req.params.id);
   if (customer) {
-    res.json({ addresses: customer.addresses });
+    res.json({ addresses: mockCustomerAddresses});
   } else {
     res.status(404).json({ error: "Customer not found" });
   }
