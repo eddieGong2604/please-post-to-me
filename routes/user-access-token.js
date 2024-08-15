@@ -24,7 +24,7 @@ router.post("/", async (req, res) => {
 
   // Here we are assuming the refreshToken is valid. In a real scenario, validate it properly.
   const jwtToken = jwt.sign({ username: verifyJwtToken.username }, jwtSecret, {
-    expiresIn: "1h",
+    expiresIn: jwtExpiry,
   });
 
   res.json({ jwt: jwtToken, refreshToken });
