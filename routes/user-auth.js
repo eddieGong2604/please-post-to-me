@@ -1,10 +1,10 @@
 import express from "express";
 import jwt from "jsonwebtoken";
 import mockUsers from "../data/mockUsers.js";
-
+import 'dotenv/config'
 const router = express.Router();
 
-const jwtSecret = process.env.JWT_SECRET;
+const jwtSecret = process.env.JWT_SECRET; 
 const refreshTokenSecret = process.env.REFRESH_TOKEN_SECRET;
 const jwtExpiry = process.env.JWT_EXPIRY;
 const refreshTokenExpiry = process.env.REFRESH_TOKEN_EXPIRY;
@@ -19,7 +19,7 @@ router.post("/", (req, res) => {
   if (!user) {
     return res.status(401).json({ message: "Authentication failed" });
   }
-
+  
   const token = jwt.sign({ username }, jwtSecret, { expiresIn: jwtExpiry });
   const refreshToken = jwt.sign({ username }, refreshTokenSecret, {
     expiresIn: refreshTokenExpiry,

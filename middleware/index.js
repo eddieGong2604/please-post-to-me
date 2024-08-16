@@ -41,7 +41,7 @@ const authWeb = async function authWeb(req, res, next) {
   }
 };
 
-const verifyRefeshToken = async function verifyRefeshToken(token) {
+const verifyRefreshToken = async function verifyRefreshToken(token) {
   try {
     const decoded = await verifyJwtToken(
       token,
@@ -50,7 +50,7 @@ const verifyRefeshToken = async function verifyRefeshToken(token) {
     if (decoded.exp) {
       const customer = await findUserByName(decoded.username);
       if (customer) {
-        return true;
+        return customer;
       }
       return false;
     }
@@ -71,4 +71,4 @@ const verifyJwtToken = function verifyJwtToken(token, secretKey) {
 const findUserByName = (name) =>
   mockUsers.find((c) => c.username.trim() === name.trim());
 
-export default { authWeb, verifyRefeshToken };
+export default { authWeb, verifyRefreshToken };
