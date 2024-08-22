@@ -6,6 +6,7 @@ import vehiclesRoutes from './routes/vehicles.js';
 import userAuthRoutes from './routes/user-auth.js';
 import userAccessTokenRoutes from './routes/user-access-token.js';
 import customerJourneyInteractionRoutes from './routes/customer-journey-interaction.js';
+import userMeRoutes from './routes/user-me.js';
 import cors from 'cors';
 const app = express();
 const port = 3000;
@@ -17,7 +18,7 @@ app.use('/vehicles', vehiclesRoutes);
 app.use('/users-auth', userAuthRoutes);
 app.use('/users-access-token', userAccessTokenRoutes);
 app.use('/customer-journey-interaction', customerJourneyInteractionRoutes);
-
+app.use('/user-me', userMeRoutes )
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });

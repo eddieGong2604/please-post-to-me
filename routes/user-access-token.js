@@ -27,7 +27,10 @@ router.post("/", async (req, res) => {
     expiresIn: jwtExpiry,
   });
 
-  res.json({ jwt: jwtToken, refreshToken });
+  const newRefreshToken = jwt.sign({ username: verifyJwtToken.username }, refreshTokenSecret, {
+    expiresIn: refreshTokenExpiry,
+  });
+  res.json({ jwt: jwtToken, refreshToken: newRefreshToken });
 });
 
 export default router;
