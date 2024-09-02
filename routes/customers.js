@@ -9,8 +9,8 @@ import mockCustomerComms from "../data/mockCustomerComms.js";
 import mockCustomerPolicies from "../data/mockCustomerPolicies.js";
 import mockCustomerRelations from "../data/mockCustomerRelations.js";
 import mockVehicles from "../data/mockCustomerVehicles.js";
-import mockJourneyInteractions from "../data/mockCustomerJourneyInteractions.js";
 import mockCustomerAddresses from "../data/mockCustomerAddresses.js";
+import mockCustomerAliases from '../data/mockCustomerAliases.js';
 
 const router = express.Router();
 const findCustomerById = (id) =>
@@ -79,14 +79,16 @@ router.get("/:id/comms", middleware.authWeb, (req, res) => {
   }
 });
 
-router.get("/:id/policies", middleware.authWeb, (req, res) => {
-  // Mock data: return 2 individual and 2 business customers
-  const customer = findCustomerById(req.params.id);
-  if (customer) {
-    res.json({ policies: mockCustomerPolicies });
-  } else {
-    res.status(404).json({ error: "Customer not found" });
-  }
+// GET /customers/:customerId/policies
+router.get('/:id/policies', middleware.authWeb, (req, res) => {
+    const { customerId } = req.params;
+    // Find all policies associated with the provided customerId
+    const customerPolicies = mockCustomerAliases
+        .filter(alias => alias.mock__field__customerId === parseInt(customerId)) // Filter aliases by customerId
+        .flatMap(alias => alias.policies); // Extract policies from each alias
+
+    // Respond with the collected policies
+    res.json({ policies: customerPolicies });
 });
 
 router.get("/:id/sj-fnols", middleware.authWeb, (req, res) => {
