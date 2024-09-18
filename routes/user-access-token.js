@@ -15,7 +15,7 @@ router.post("/", async (req, res) => {
     return res.status(400).json({ error: "Refresh token is required" });
   }
 
-  const verifyJwtToken = await middleware.verifyRefeshToken(refreshToken);
+  const verifyJwtToken = await middleware.verifyRefreshToken(refreshToken);
   if (!verifyJwtToken) {
     return res.status(401).json({
       message: "Invalid Refresh Token",
@@ -23,11 +23,14 @@ router.post("/", async (req, res) => {
   }
 
   // Here we are assuming the refreshToken is valid. In a real scenario, validate it properly.
-  const jwtToken = jwt.sign({ user: "sampleUser" }, jwtSecret, {
-    expiresIn: "1h",
+  const jwtToken = jwt.sign({ username: verifyJwtToken.username }, jwtSecret, {
+    expiresIn: jwtExpiry,
   });
 
-  res.json({ jwt: jwtToken, refreshToken });
+  const newRefreshToken = jwt.sign({ username: verifyJwtToken.username }, refreshTokenSecret, {
+    expiresIn: refreshTokenExpiry,
+  });
+  res.json({ jwt: jwtToken, refreshToken: newRefreshToken });
 });
 
 export default router;

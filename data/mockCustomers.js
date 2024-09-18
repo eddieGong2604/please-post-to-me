@@ -16,7 +16,8 @@ const mockCustomers = [
             { full_address: '123 Main St, City, Country', preferred: true, latitude: '40.7128', longitude: '-74.0060', country: 'USA' },
             { full_address: '124 Main St, City, Country', preferred: false, country: 'USA' }
         ],
-        aliases: mockAliases,
+        aliases: mockAliases.filter(ma=>ma.mock__field__customerId == 1),
+        current_policy_count: 1,
         customer_keys: ["CMDM-IAG412512421523","PMS-IAG234235234234","CMDM-IAG524346456456"]
     },
     {
@@ -32,7 +33,8 @@ const mockCustomers = [
         addresses: [
             { full_address: '456 Oak St, City, Country', preferred: true, latitude: '34.0522', longitude: '-118.2437', country: 'USA' }
         ],
-        aliases: mockAliases,
+        aliases: mockAliases.filter(ma=>ma.mock__field__customerId == 2),
+        current_policy_count: 1,
         customer_keys: ["CMDM-IAG412512421523","PMS-IAG234235234234"]
     },
     {
@@ -48,7 +50,8 @@ const mockCustomers = [
         addresses: [
             { full_address: '789 Pine St, City, Country', preferred: true, latitude: '37.7749', longitude: '-122.4194', country: 'USA' }
         ],
-        aliases: mockAliases,
+        aliases: mockAliases.filter(ma=>ma.mock__field__customerId == 3),
+        current_policy_count: 0,
         customer_keys: ["CMDM-IAG412512421523","PMS-IAG234235234234"]
     },
     {
@@ -62,7 +65,8 @@ const mockCustomers = [
         start_date: '2021-07-20T00:00:00.000Z',
         is_valid: true,
         addresses: [],
-        aliases: mockAliases,
+        aliases: mockAliases.filter(ma=>ma.mock__field__customerId == 4),
+        current_policy_count: 1,
         customer_keys: ["CMDM-IAG412512421523","PMS-IAG234235234234"]
     },
     {
@@ -76,7 +80,8 @@ const mockCustomers = [
         start_date: '2024-11-05T00:00:00.000Z',
         is_valid: false,
         addresses: [],
-        aliases: mockAliases,
+        aliases: mockAliases.filter(ma=>ma.mock__field__customerId == 5),
+        current_policy_count: 0,
         customer_keys: ["CMDM-IAG412512421523","PMS-IAG234235234234"]
     },
 
@@ -87,23 +92,29 @@ const mockCustomers = [
         organisation_name: 'Tech Solutions Ltd',
         date_of_birth: null,
         gender: null,
+        abn: "65106533523",
+        acn: null,
         start_date: '2021-06-01T00:00:00.000Z',
         is_valid: true,
         addresses: [
             { full_address: '303 Cedar St, City, Country', preferred: true, latitude: '36.1699', longitude: '-115.1398', country: 'USA' }
         ],
-        aliases: mockAliases,
+        aliases: mockAliases.filter(ma=>ma.mock__field__customerId == 6),
+        current_policy_count: 1,
         customer_keys: ["CMDM-IAG412512421523","PMS-IAG234235234234"]
     },
     {
         id: 7,
         customer_type: 'BUSINESS',
         organisation_name: 'Global Industries Inc',
+        abn: null,
+        acn: "4235235235",
         date_of_birth: null,
         gender: null,
         start_date: '2022-08-15T00:00:00.000Z',
         is_valid: true,
         addresses: [],
+        aliases: mockAliases.filter(ma=>ma.mock__field__customerId == 7),
         customer_keys: ["CMDM-IAG412512421523","PMS-IAG234235234234"]
     },
     {
@@ -111,13 +122,16 @@ const mockCustomers = [
         customer_type: 'BUSINESS',
         organisation_name: 'Creative Works LLC',
         date_of_birth: null,
+        abn: null,
+        acn: null,
         gender: null,
         start_date: '2023-01-10T00:00:00.000Z',
         is_valid: true,
         addresses: [
             { full_address: '505 Aspen St, City, Country', preferred: true, latitude: '40.7306', longitude: '-73.9352', country: 'USA' }
         ],
-        aliases: mockAliases,
+        aliases: mockAliases.filter(ma=>ma.mock__field__customerId == 8),
+        current_policy_count: 0,
         customer_keys: ["CMDM-IAG412512421523","PMS-IAG234235234234"]
     },
     {
@@ -125,13 +139,16 @@ const mockCustomers = [
         customer_type: 'BUSINESS',
         organisation_name: 'Enterprise Holdings',
         date_of_birth: null,
+        abn: "52435325235",
+        acn: null,
         gender: null,
         start_date: '2021-09-22T00:00:00.000Z',
         is_valid: true,
         addresses: [
             { full_address: '606 Fir St, City, Country', preferred: true, latitude: '32.7157', longitude: '-117.1611', country: 'USA' }
         ],
-        aliases: mockAliases,
+        aliases: mockAliases.filter(ma=>ma.mock__field__customerId == 9),
+        current_policy_count: 1,
         customer_keys: ["CMDM-IAG412512421523","PMS-IAG234235234234"]
     }
 ];
