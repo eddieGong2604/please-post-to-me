@@ -33,4 +33,11 @@ router.post("/", async (req, res) => {
   res.json({ jwt: jwtToken, refreshToken: newRefreshToken });
 });
 
+router.delete('', (req, res) => {
+  // Extract the refreshToken from the query parameters
+  const { refreshToken } = req.query;
+  // Always respond with 204 No Content
+  res.status(204).send();
+});
+
 export default router;
