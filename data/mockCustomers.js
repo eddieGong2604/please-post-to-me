@@ -3,7 +3,7 @@ import mockAliases from "./mockCustomerAliases.js";
 const mockCustomers = [
     // INDIVIDUAL customers
     {
-        id: 1,
+        _id: 1,
         customer_type: 'INDIVIDUAL',
         first_name: 'John',
         middle_name: 'A',
@@ -21,7 +21,7 @@ const mockCustomers = [
         customer_keys: ["CMDM-IAG412512421523","PMS-IAG234235234234","CMDM-IAG524346456456"]
     },
     {
-        id: 2,
+        _id: 2,
         customer_type: 'INDIVIDUAL',
         first_name: 'Jane',
         middle_name: 'B',
@@ -38,7 +38,7 @@ const mockCustomers = [
         customer_keys: ["CMDM-IAG412512421523","PMS-IAG234235234234"]
     },
     {
-        id: 3,
+        _id: 3,
         customer_type: 'INDIVIDUAL',
         first_name: 'Eddy',
         middle_name: 'C',
@@ -55,7 +55,7 @@ const mockCustomers = [
         customer_keys: ["CMDM-IAG412512421523","PMS-IAG234235234234"]
     },
     {
-        id: 4,
+        _id: 4,
         customer_type: 'INDIVIDUAL',
         first_name: 'Alice',
         middle_name: 'D',
@@ -70,7 +70,7 @@ const mockCustomers = [
         customer_keys: ["CMDM-IAG412512421523","PMS-IAG234235234234"]
     },
     {
-        id: 5,
+        _id: 5,
         customer_type: 'INDIVIDUAL',
         first_name: 'Bob',
         middle_name: 'E',
@@ -87,7 +87,7 @@ const mockCustomers = [
 
     // BUSINESS customers
     {
-        id: 6,
+        _id: 6,
         customer_type: 'BUSINESS',
         organisation_name: 'Tech Solutions Ltd',
         date_of_birth: null,
@@ -104,7 +104,7 @@ const mockCustomers = [
         customer_keys: ["CMDM-IAG412512421523","PMS-IAG234235234234"]
     },
     {
-        id: 7,
+        _id: 7,
         customer_type: 'BUSINESS',
         organisation_name: 'Global Industries Inc',
         abn: null,
@@ -118,7 +118,7 @@ const mockCustomers = [
         customer_keys: ["CMDM-IAG412512421523","PMS-IAG234235234234"]
     },
     {
-        id: 8,
+        _id: 8,
         customer_type: 'BUSINESS',
         organisation_name: 'Creative Works LLC',
         date_of_birth: null,
@@ -135,7 +135,7 @@ const mockCustomers = [
         customer_keys: ["CMDM-IAG412512421523","PMS-IAG234235234234"]
     },
     {
-        id: 9,
+        _id: 9,
         customer_type: 'BUSINESS',
         organisation_name: 'Enterprise Holdings',
         date_of_birth: null,
