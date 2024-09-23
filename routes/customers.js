@@ -14,7 +14,7 @@ import mockCustomerAliases from '../data/mockCustomerAliases.js';
 
 const router = express.Router();
 const findCustomerById = (id) =>
-  mockCustomers.find((c) => c.id === parseInt(id));
+  mockCustomers.find((c) => c._id === parseInt(id));
 
 router.get("/", middleware.authWeb, (req, res) => {
   res.json({ customers: mockCustomers });
