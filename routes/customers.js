@@ -80,7 +80,7 @@ router.get("/:id/comms", middleware.authWeb, (req, res) => {
 });
 
 // GET /customers/:customerId/policies
-router.get('/:id/policies', middleware.authWeb, (req, res) => {
+router.get('/:customerId/policies', middleware.authWeb, (req, res) => {
     const { customerId } = req.params;
     // Find all policies associated with the provided customerId
     const customerPolicies = mockCustomerAliases
