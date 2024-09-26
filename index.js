@@ -2,7 +2,6 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import customersRoutes from './routes/customers.js';
 import vehiclesRoutes from './routes/vehicles.js';
-
 import userAuthRoutes from './routes/user-auth.js';
 import userAccessTokenRoutes from './routes/user-access-token.js';
 import customerJourneyInteractionRoutes from './routes/customer-journey-interaction.js';
