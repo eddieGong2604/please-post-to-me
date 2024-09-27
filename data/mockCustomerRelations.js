@@ -73,7 +73,7 @@ const mockBusinessAliases = [
 
 
 const mockCustomerRelations = [
-    { id: 2, customer_type: 'INDIVIDUAL',
+    { _id: 2, customer_type: 'INDIVIDUAL',
         first_name: 'Jane', middle_name: 'B',
         last_name: 'Smith', date_of_birth: '1990-02-15',
         gender: 'Female', start_date: '2023-02-15', is_valid: true,
@@ -81,13 +81,13 @@ const mockCustomerRelations = [
         aliases: mockCustomerAliases.filter(a=>a.mock__field__customerId == 2),
         current_policy_count: 0
     },
-    { id: 3, customer_type: 'INDIVIDUAL', first_name: 'Eddy', middle_name: 'C', last_name: 'Johnson',
+    { _id: 3, customer_type: 'INDIVIDUAL', first_name: 'Eddy', middle_name: 'C', last_name: 'Johnson',
         date_of_birth: '1985-03-30', gender: 'Male', start_date: '2022-03-30',
         is_valid: true, addresses: [{ full_address: '789 Pine St, City, Country', preferred: true, latitude: '37.7749', longitude: '-122.4194', country: 'USA' }],
         aliases: mockCustomerAliases.filter(a=>a.mock__field__customerId == 3),
         current_policy_count: 1
     },
-    { id: 6,
+    { _id: 6,
         customer_type: 'BUSINESS',
         organisation_name: 'Tech Solutions Ltd',
         start_date: '2021-06-01', is_valid: true,
@@ -95,7 +95,7 @@ const mockCustomerRelations = [
         aliases: mockBusinessAliases,
         current_policy_count: 1
     },
-    { id: 7, customer_type: 'BUSINESS', organisation_name: 'Global Industries Inc', start_date: '2022-08-15', is_valid: true, addresses: [],
+    { _id: 7, customer_type: 'BUSINESS', organisation_name: 'Global Industries Inc', start_date: '2022-08-15', is_valid: true, addresses: [],
         aliases: mockBusinessAliases,
         current_policy_count: 0
     }
