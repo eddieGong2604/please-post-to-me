@@ -78,13 +78,13 @@ const mockCustomerRelations = [
         last_name: 'Smith', date_of_birth: '1990-02-15',
         gender: 'Female', start_date: '2023-02-15', is_valid: true,
         addresses: [{ full_address: '456 Oak St, City, Country', preferred: true, latitude: '34.0522', longitude: '-118.2437', country: 'USA' }],
-        aliases: mockCustomerAliases,
+        aliases: mockCustomerAliases.filter(a=>a.mock__field__customerId == 2),
         current_policy_count: 0
     },
     { id: 3, customer_type: 'INDIVIDUAL', first_name: 'Eddy', middle_name: 'C', last_name: 'Johnson',
         date_of_birth: '1985-03-30', gender: 'Male', start_date: '2022-03-30',
         is_valid: true, addresses: [{ full_address: '789 Pine St, City, Country', preferred: true, latitude: '37.7749', longitude: '-122.4194', country: 'USA' }],
-        aliases: mockCustomerAliases,
+        aliases: mockCustomerAliases.filter(a=>a.mock__field__customerId == 3),
         current_policy_count: 1
     },
     { id: 6,
