@@ -9,7 +9,6 @@ import userMeRoutes from './routes/user-me.js';
 import addressesRoutes from './routes/addresses.js'
 import propertiesRoutes from './routes/properties.js'
 import geofactorsRoutes from './routes/geofactors.js'
-
 import cors from 'cors';
 const app = express();
 const port = 3000;
