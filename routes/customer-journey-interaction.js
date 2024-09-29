@@ -3,7 +3,12 @@ import mockJourneyInteractions from "../data/mockCustomerJourneyInteractions.js"
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+router.get('/', async (req, res) => {
+    await sleep(8000);
     const { skip = 0, limit = 100, pipeline_name } = req.query;
 
     // Convert skip and limit to integers
