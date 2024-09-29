@@ -39,7 +39,7 @@ const generateMockPolicies = () => {
             asset_description: `Asset Description ${i + 1}`,
             svx_policy_key: `SVXKEY${Math.floor(Math.random() * 100000)}`,
             source_policy_key: `SOURCEKEY${Math.floor(Math.random() * 100000)}`,
-            risks: risks, // Assign 3 different risks
+            risks: [...risks, ...risks], // Assign 3 different risks & duplicate
         });
     }
 
