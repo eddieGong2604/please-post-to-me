@@ -35,7 +35,7 @@ const mockCustomers = [
         ],
         aliases: mockAliases.filter(ma=>ma.mock__field__customerId == 2),
         current_policy_count: 1,
-        customer_keys: ["CMDM-IAG412512421523","PMS-IAG234235234234"]
+        customer_keys: ["CMDM-NOINTERACTION000","PMS-IAG234235234234"]
     },
     {
         _id: 3,

@@ -9,7 +9,9 @@ function sleep(ms) {
 
 router.get('/', async (req, res) => {
     await sleep(8000);
-    const { skip = 0, limit = 100, filter } = req.query;
+    const { skip = 0, limit = 100, filter, public_party_id } = req.query;
+    if(!public_party_id || public_party_id.contains("NOINTERACTION000")) return res.json({ totalCount: 0, journeyInteractions: [] });
+
     const filterArray = JSON.parse(filter);
     // Convert skip and limit to integers
     const skipInt = parseInt(skip, 10);
