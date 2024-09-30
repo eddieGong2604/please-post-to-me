@@ -9,8 +9,8 @@ function sleep(ms) {
 
 router.get('/', async (req, res) => {
     await sleep(8000);
-    const { skip = 0, limit = 100, pipeline_name } = req.query;
-
+    const { skip = 0, limit = 100, filter } = req.query;
+    const filterArray = JSON.parse(filter);
     // Convert skip and limit to integers
     const skipInt = parseInt(skip, 10);
     const limitInt = parseInt(limit, 10);
@@ -18,10 +18,9 @@ router.get('/', async (req, res) => {
     // Filter by pipeline_name if provided
     let filteredInteractions = mockJourneyInteractions;
 
-    if (pipeline_name) {
-        const pipelineNames = pipeline_name.split(',').map(name => name.trim());
+    if (filterArray && filterArray.length == 1) {
         filteredInteractions = filteredInteractions.filter(interaction =>
-            pipelineNames.includes(interaction.pipeline_name)
+            interaction.pipeline_name.startsWith(filterArray[0].value)
         );
     }
 
