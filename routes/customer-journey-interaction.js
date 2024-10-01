@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
     // Filter by pipeline_name if provided
     let filteredInteractions = mockJourneyInteractions;
 
-    if (filterArray && filterArray.length == 1) {
+    if (filterArray && filterArray.length == 1 && filterArray[0].value) {
         filteredInteractions = filteredInteractions.filter(interaction =>
             interaction.pipeline_name.startsWith(filterArray[0].value)
         );
