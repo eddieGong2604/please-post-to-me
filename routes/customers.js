@@ -17,6 +17,8 @@ const findCustomerById = (id) =>
   mockCustomers.find((c) => c._id === parseInt(id));
 
 router.get("/", middleware.authWeb, (req, res) => {
+  const {_id, first_name, middle_name, last_name, name, legal_entity, date_of_birth, organisation_name, customer_type, skip, limit, include_addresses} = req.query;
+
   res.json({ customers: mockCustomers });
 });
 
