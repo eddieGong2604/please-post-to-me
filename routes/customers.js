@@ -42,13 +42,9 @@ router.get("/:id/relations", middleware.authWeb, (req, res) => {
 });
 
 router.get("/:id/addresses", middleware.authWeb, (req, res) => {
-  // Mock data: return 2 individual and 2 business customers
   const customer = findCustomerById(req.params.id);
   if (customer) {
-    if(req.params.id == 2){
-      res.json({ addresses: []});
-    }
-    res.json({ addresses: mockCustomerAddresses});
+    res.json({ addresses: customer.addresses});
   } else {
     res.status(404).json({ error: "Customer not found" });
   }
