@@ -14,6 +14,9 @@ const mockCustomers = [
         start_date: '2022-01-01T00:00:00.000Z',
         is_valid: true,
         addresses: [
+            { full_address: mockAddresses[10].fullAddress, gnaf_pid: mockAddresses[10].gnafPID, latitude: mockAddresses[10].latitude, longitude: mockAddresses[10].longitude, preferred: false, country: mockAddresses[10].country },
+            { full_address: mockAddresses[11].fullAddress, gnaf_pid: mockAddresses[11].gnafPID, latitude: mockAddresses[11].latitude, longitude: mockAddresses[11].longitude, preferred: false, country: mockAddresses[11].country },
+            { full_address: mockAddresses[12].fullAddress, gnaf_pid: mockAddresses[12].gnafPID, latitude: mockAddresses[12].latitude, longitude: mockAddresses[12].longitude, preferred: false, country: mockAddresses[12].country },
             { full_address: mockAddresses[1].fullAddress, gnaf_pid: mockAddresses[1].gnafPID, latitude: mockAddresses[1].latitude, longitude: mockAddresses[1].longitude, preferred: true, country: mockAddresses[1].country },
             { full_address: mockAddresses[0].fullAddress, dpid: "DP042024", latitude: mockAddresses[0].latitude, longitude: mockAddresses[0].longitude, preferred: false, country: mockAddresses[0].country }
         ],
