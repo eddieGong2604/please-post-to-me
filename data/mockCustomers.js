@@ -14,8 +14,8 @@ const mockCustomers = [
         start_date: '2022-01-01T00:00:00.000Z',
         is_valid: true,
         addresses: [
-            { ...mockAddresses[1], preferred: true, country: 'AU' },
-            { ...mockAddresses[0], preferred: false, country: 'AU' }
+            { full_address: mockAddresses[1].fullAddress, gnaf_pid: mockAddresses[1].gnafPID, latitude: mockAddresses[1].latitude, longitude: mockAddresses[1].longitude, preferred: true, country: mockAddresses[1].country },
+            { full_address: mockAddresses[0].fullAddress, gnaf_pid: mockAddresses[0].gnafPID, latitude: mockAddresses[0].latitude, longitude: mockAddresses[0].longitude, preferred: false, country: mockAddresses[0].country }
         ],
         aliases: mockAliases.filter(ma=>ma.mock__field__customerId == 1),
         current_policy_count: 1,
@@ -32,7 +32,7 @@ const mockCustomers = [
         start_date: '2023-02-15T00:00:00.000Z',
         is_valid: true,
         addresses: [
-            { ...mockAddresses[2], preferred: true, country: 'AU' }
+            { full_address: mockAddresses[2].fullAddress, gnaf_pid: mockAddresses[2].gnafPID, latitude: mockAddresses[2].latitude, longitude: mockAddresses[2].longitude, preferred: true, country: mockAddresses[2].country }
         ],
         aliases: mockAliases.filter(ma=>ma.mock__field__customerId == 2),
         current_policy_count: 1,
@@ -49,7 +49,7 @@ const mockCustomers = [
         start_date: '2022-03-30T00:00:00.000Z',
         is_valid: true,
         addresses: [
-            { ...mockAddresses[3], preferred: true, country: 'AU' }
+            { full_address: mockAddresses[3].fullAddress, gnaf_pid: mockAddresses[3].gnafPID, latitude: mockAddresses[3].latitude, longitude: mockAddresses[3].longitude, preferred: true, country: mockAddresses[3].country }
         ],
         aliases: mockAliases.filter(ma=>ma.mock__field__customerId == 3),
         current_policy_count: 0,
@@ -98,7 +98,7 @@ const mockCustomers = [
         start_date: '2021-06-01T00:00:00.000Z',
         is_valid: true,
         addresses: [
-            { ...mockAddresses[6], preferred: true, country: 'AU' }
+            { full_address: mockAddresses[6].fullAddress, gnaf_pid: mockAddresses[6].gnafPID, latitude: mockAddresses[6].latitude, longitude: mockAddresses[6].longitude, preferred: true, country: mockAddresses[6].country }
         ],
         aliases: mockAliases.filter(ma=>ma.mock__field__customerId == 6),
         current_policy_count: 1,
@@ -129,8 +129,8 @@ const mockCustomers = [
         start_date: '2023-01-10T00:00:00.000Z',
         is_valid: true,
         addresses: [
-            { ...mockAddresses[6], preferred: true, country: 'AU' },
-            { ...mockAddresses[7], preferred: false, country: 'AU' }
+            { full_address: mockAddresses[6].fullAddress, gnaf_pid: mockAddresses[6].gnafPID, latitude: mockAddresses[6].latitude, longitude: mockAddresses[6].longitude, preferred: true, country: mockAddresses[6].country },
+            { full_address: mockAddresses[7].fullAddress, gnaf_pid: mockAddresses[7].gnafPID, latitude: mockAddresses[7].latitude, longitude: mockAddresses[7].longitude, preferred: false, country: mockAddresses[7].country }
         ],
         aliases: mockAliases.filter(ma=>ma.mock__field__customerId == 8),
         current_policy_count: 0,
