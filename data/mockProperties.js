@@ -6,7 +6,7 @@ const generateMockProperties = (count) => {
         const gnafPID = i % 2 === 0 ? `GNAFPID${String(i).padStart(5, '0')}` : null;
         const dpid = gnafPID ? null : `DPID${String(i).padStart(5, '0')}`;
         properties.push({
-            property_id: gnaf_pid ?? dpid, // Matching with gnaf_pid from addresses
+            property_id: gnafPID ?? dpid, // Matching with gnaf_pid from addresses
             slope: (Math.random() * 100).toFixed(2), // Example slope value
             storage_small_count: Math.floor(Math.random() * 10), // Random count
             storage_large_count: Math.floor(Math.random() * 10), // Random count
