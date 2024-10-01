@@ -5,8 +5,8 @@ function generateRandomAddress(index) {
     const randomCity = cities[index % cities.length];
     const randomStreet = streets[index % streets.length];
     const randomState = states[index % states.length];
-    const randomStreetNumber = Math.floor(Math.random() * 1000) + 1;
-    const randomPostcode = Math.floor(Math.random() * 9000) + 1000;
+    const randomStreetNumber = index + 1;
+    const randomPostcode = index + 1000;
 
     // Generate predictable gnafPID based on index
     const gnafPID = index % 2 === 0 ? `GNAFPID${String(index).padStart(5, '0')}` : null;
