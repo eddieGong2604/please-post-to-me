@@ -9,7 +9,7 @@ function generateRandomAddress(index) {
     const randomPostcode = index + 1000;
 
     // Generate predictable gnafPID based on index
-    const gnafPID = index % 2 === 0 ? `GNAFPID${String(index).padStart(5, '0')}` : null;
+    const gnafPID = `GNAFPID${String(index).padStart(5, '0')}`;
     const dpid = gnafPID ? null : `DPID${String(index).padStart(5, '0')}`;
 
     // Generate random latitude and longitude as strings
