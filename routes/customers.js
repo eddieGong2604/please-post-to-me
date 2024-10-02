@@ -18,7 +18,15 @@ const findCustomerById = (id) =>
 
 router.get("/", middleware.authWeb, (req, res) => {
   const {_id, first_name, middle_name, last_name, name, legal_entity, date_of_birth, organisation_name, customer_type, skip, limit, include_addresses} = req.query;
-  res.json({ customers: mockCustomers.filter(customer => customer_type ? customer.customer_type == customer_type : true) });
+  let filteredCustomers = mockCustomers;
+  filteredCustomers = filteredCustomers.filter(customer => _id ? customer._id == _id : true).
+                      filter(customer => first_name ? customer.first_name?.includes(first_name) : true).
+                      filter(customer => middle_name ? customer.middle_name?.includes(middle_name) : true).
+                      filter(customer => last_name ? customer.last_name?.includes(last_name) : true).
+                      filter(customer => name ? (customer.first_name?.includes(name) || customer.middle_name?.includes(name) || customer.last_name?.includes(name)) : true).
+                      filter(customer => last_name ? customer.last_name?.includes(last_name) : true).
+                      filter(customer => customer_type ? customer.customer_type == customer_type : true);
+  res.json({ customers: filteredCustomers });
 });
 
 // Get a single customer by ID
