@@ -25,6 +25,7 @@ router.get("/", middleware.authWeb, (req, res) => {
                       filter(customer => last_name ? customer.last_name?.toLowerCase()?.includes(last_name.toLowerCase()) : true).
                       filter(customer => name ? (customer.first_name?.toLowerCase()?.includes(name.toLowerCase()) || customer.middle_name?.toLowerCase()?.includes(name.toLowerCase()) || customer.last_name?.toLowerCase()?.includes(name.toLowerCase())) : true).
                       filter(customer => last_name ? customer.last_name?.toLowerCase()?.includes(last_name.toLowerCase()) : true).
+                      filter(customer => organisation_name ? (customer.customer_type == "BUSINESS" && customer.organisation_name?.toLowerCase()?.includes(organisation_name.toLowerCase())) : true).
                       filter(customer => customer_type ? customer.customer_type == customer_type : true);
   res.json({ customers: filteredCustomers });
 });
