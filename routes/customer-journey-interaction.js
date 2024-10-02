@@ -8,6 +8,7 @@ function sleep(ms) {
   }
 
 router.get('/', async (req, res) => {
+    await sleep(4000);
     const { skip = 0, limit = 100, filter, public_party_id } = req.query;
     if(!public_party_id || public_party_id.includes("NOINTERACTION000")) return res.json({ totalCount: 0, journeyInteractions: [] });
 
