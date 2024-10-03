@@ -80,7 +80,7 @@ const generateMockContactPoints = () => {
 
         let contact_point = {
             contact_method: contact_method,
-            contact_value: contact_method === 'PHONE' ? `+61${Math.floor(100000000 + Math.random() * 900000000)}` : `user${Math.floor(Math.random() * 10000)}@example.com`,
+            contact_value: contact_method === 'PHONE' ? `+61${Math.floor(100000000 + Math.random() * 900000000)}` : `user${Math.floor(Math.random() * 10000)}@exampleverylengthylengthy.com`,
             contact_qualifier: contact_method === 'PHONE' ? contactQualifiers[Math.floor(Math.random() * contactQualifiers.length)] : null,
             contact_country_code: contact_method === 'PHONE' ? '+61' : null,
         };
