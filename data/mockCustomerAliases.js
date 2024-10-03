@@ -19,7 +19,7 @@ const generateMockCustomerAliases = (customerId) => {
     return {
         is_valid: true, // All aliases are valid
         mock__field__customerId: customerId, // Mapping to customer ID
-        policies: generateMockPolicies(), // Generate policies
+        ...(customerId != 2 ? {policies: generateMockPolicies()}: {}), // Generate policies
         contact_points: generateMockContactPoints(), // Generate contact points
     };
 };
