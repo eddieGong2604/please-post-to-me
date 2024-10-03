@@ -15,12 +15,12 @@ const riskTypes = [
     "Landlord", "Residential Strata", "Personal Effects", "Travel"
 ];
 
-const generateMockCustomerAliases = (customerId) => {
+const generateMockCustomerAliases = (customerId, index) => {
     return {
         is_valid: true, // All aliases are valid
         mock__field__customerId: customerId, // Mapping to customer ID
-        ...(customerId != 2 ? {policies: generateMockPolicies()}: {}), // Generate policies
-        ...(customerId != 2 ? {contact_points: generateMockContactPoints()}: {}), // Generate contact points
+        ...(customerId != 2 && index != 0 ? {policies: generateMockPolicies()}: {}), // Generate policies
+        ...(customerId != 2 && index != 0 ? {contact_points: generateMockContactPoints()}: {}), // Generate contact points
     };
 };
 
@@ -104,7 +104,7 @@ function shuffleArray(array) {
 const mockCustomerAliases = [];
 for (let customerId = 1; customerId <= 9; customerId++) {
     for (let i = 0; i < 3; i++) { // 3 Aliases per customer
-        mockCustomerAliases.push(generateMockCustomerAliases(customerId));
+        mockCustomerAliases.push(generateMockCustomerAliases(customerId, i));
     }
 }
 
