@@ -97,7 +97,7 @@ router.get('/:customerId/policies', middleware.authWeb, (req, res) => {
     // Find all policies associated with the provided customerId
     const customerPolicies = mockCustomerAliases
         .filter(alias => alias.mock__field__customerId === parseInt(customerId)) // Filter aliases by customerId
-        .flatMap(alias => alias.policies); // Extract policies from each alias
+        .flatMap(alias => (alias.policies || [])); // Extract policies from each alias
 
     // Respond with the collected policies
     res.json({ policies: customerPolicies });
