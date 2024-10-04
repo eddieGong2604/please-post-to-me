@@ -17,8 +17,9 @@ const findCustomerById = (id) =>
   mockCustomers.find((c) => c._id === parseInt(id));
 
 router.get("/", middleware.authWeb, (req, res) => {
-  const {_id, first_name, middle_name, last_name, name, legal_entity, date_of_birth, organisation_name, customer_type, skip, limit, include_addresses} = req.query;
+  let {_id, first_name, middle_name, last_name, name, legal_entity, date_of_birth, organisation_name, customer_type, skip, limit, include_addresses} = req.query;
   let filteredCustomers = mockCustomers;
+  if(customer_type == "BUSINESS") organisation_name = name;
   filteredCustomers = filteredCustomers.filter(customer => _id ? customer._id == _id : true).
                       filter(customer => first_name ? customer.first_name?.toLowerCase()?.includes(first_name.toLowerCase()) : true).
                       filter(customer => middle_name ? customer.middle_name?.toLowerCase()?.includes(middle_name.toLowerCase()) : true).
