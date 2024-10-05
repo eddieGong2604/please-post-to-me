@@ -17,7 +17,7 @@ const findCustomerById = (id) =>
   mockCustomers.find((c) => c._id === parseInt(id));
 
 router.get("/", middleware.authWeb, (req, res) => {
-  let {_id, first_name, middle_name, last_name, name, legal_entity, date_of_birth, organisation_name, customer_type, skip, limit, include_addresses} = req.query;
+  let {_id, first_name, middle_name, last_name, name, legal_entity, date_of_birth, organisation_name, customer_type, skip, limit, include_addresses, gnaf_pid, dpid} = req.query;
   let filteredCustomers = mockCustomers;
   filteredCustomers = filteredCustomers.filter(customer => _id ? customer._id == _id : true).
                       filter(customer => first_name ? customer.first_name?.toLowerCase()?.includes(first_name.toLowerCase()) : true).
@@ -26,7 +26,9 @@ router.get("/", middleware.authWeb, (req, res) => {
                       filter(customer => name ? (customer.first_name?.toLowerCase()?.includes(name.toLowerCase()) || customer.middle_name?.toLowerCase()?.includes(name.toLowerCase()) || customer.last_name?.toLowerCase()?.includes(name.toLowerCase()) || customer.organisation_name?.toLowerCase()?.includes(name.toLowerCase())) : true).
                       filter(customer => last_name ? customer.last_name?.toLowerCase()?.includes(last_name.toLowerCase()) : true).
                       filter(customer => organisation_name ? (customer.customer_type == "BUSINESS" && customer.organisation_name?.toLowerCase()?.includes(organisation_name.toLowerCase())) : true).
-                      filter(customer => customer_type ? customer.customer_type == customer_type : true);
+                      filter(customer => customer_type ? customer.customer_type == customer_type : true).
+                      filter(customer => gnaf_pid ? customer.addresses?.find(a=>a.gnaf_pid == gnaf_pid) : true)
+                      filter(customer => dpid ? customer.addresses?.find(a=>a.dpid == dpid) : true);
   res.json({ customers: filteredCustomers });
 });
 
