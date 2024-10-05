@@ -27,7 +27,7 @@ router.get("/", middleware.authWeb, (req, res) => {
                       filter(customer => last_name ? customer.last_name?.toLowerCase()?.includes(last_name.toLowerCase()) : true).
                       filter(customer => organisation_name ? (customer.customer_type == "BUSINESS" && customer.organisation_name?.toLowerCase()?.includes(organisation_name.toLowerCase())) : true).
                       filter(customer => customer_type ? customer.customer_type == customer_type : true).
-                      filter(customer => gnaf_pid ? customer.addresses?.find(a=>a.gnaf_pid == gnaf_pid) : true)
+                      filter(customer => gnaf_pid ? customer.addresses?.find(a=>a.gnaf_pid == gnaf_pid) : true).
                       filter(customer => dpid ? customer.addresses?.find(a=>a.dpid == dpid) : true);
   res.json({ customers: filteredCustomers });
 });
