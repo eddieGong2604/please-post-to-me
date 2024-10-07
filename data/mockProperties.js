@@ -56,7 +56,7 @@ const generateMockStructures = () => {
             has_plantation_shutter: Math.random() < 0.5 ? true : null, // Random boolean or null
             has_european_appliances: Math.random() < 0.5 ? true : null, // Random boolean or null
             has_heating_cooling: Math.random() < 0.5 ? true : null, // Random boolean or null
-            heating_cooling_types: Math.random() < 0.5 ? 'Central' : null, // Random heating/cooling type or null
+            heating_cooling_types: ["ducted_air_con"], // Random heating/cooling type or null
             is_primary: is_primary // Only one structure is primary
         });
     }
