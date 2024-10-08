@@ -46,7 +46,6 @@ const mockCustomers = [
         _id: 3,
         customer_type: 'INDIVIDUAL',
         first_name: 'Eddy',
-        middle_name: 'C',
         last_name: 'Johnson',
         date_of_birth: '1985-03-30T00:00:00.000Z',
         gender: 'M',
