@@ -35,6 +35,7 @@ const mockCustomers = [
         start_date: '2023-02-15T00:00:00.000Z',
         is_valid: true,
         addresses: [
+            { full_address: mockAddresses[10].fullAddress, gnaf_pid: mockAddresses[10].gnafPID, latitude: mockAddresses[10].latitude, longitude: mockAddresses[10].longitude, preferred: false, country: mockAddresses[10].country },
             { full_address: mockAddresses[2].fullAddress, dpid: "DPID123123", latitude: mockAddresses[2].latitude, longitude: mockAddresses[2].longitude, preferred: true, country: mockAddresses[2].country }
         ],
         aliases: mockAliases.filter(ma=>ma.mock__field__customerId == 2),
@@ -52,6 +53,7 @@ const mockCustomers = [
         start_date: '2022-03-30T00:00:00.000Z',
         is_valid: true,
         addresses: [
+            { full_address: mockAddresses[10].fullAddress, gnaf_pid: mockAddresses[10].gnafPID, latitude: mockAddresses[10].latitude, longitude: mockAddresses[10].longitude, preferred: false, country: mockAddresses[10].country },
             { full_address: mockAddresses[3].fullAddress, gnaf_pid: mockAddresses[3].gnafPID, latitude: mockAddresses[3].latitude, longitude: mockAddresses[3].longitude, preferred: true, country: mockAddresses[3].country }
         ],
         aliases: mockAliases.filter(ma=>ma.mock__field__customerId == 3),
