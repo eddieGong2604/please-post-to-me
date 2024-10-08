@@ -103,6 +103,7 @@ const mockCustomers = [
         start_date: '2021-06-01T00:00:00.000Z',
         is_valid: true,
         addresses: [
+            { full_address: mockAddresses[10].fullAddress, gnaf_pid: mockAddresses[10].gnafPID, latitude: mockAddresses[10].latitude, longitude: mockAddresses[10].longitude, preferred: false, country: mockAddresses[10].country },
             { full_address: mockAddresses[6].fullAddress, gnaf_pid: mockAddresses[6].gnafPID, latitude: mockAddresses[6].latitude, longitude: mockAddresses[6].longitude, preferred: true, country: mockAddresses[6].country }
         ],
         aliases: mockAliases.filter(ma=>ma.mock__field__customerId == 6),
