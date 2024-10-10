@@ -29,34 +29,34 @@ const generateMockStructures = () => {
     for (let j = 0; j < numberOfStructures; j++) {
         const is_primary = j === 0; // Mark the first structure as primary
         structures.push({
-            construction_year: 2000 + Math.floor(Math.random() * 23), // Random year from 2000 to 2022
-            period_of_construction: ['Modern', 'Contemporary', 'Classic', 'Victorian'][i%3], // Random period
-            number_of_levels: i%3==0 ? 1 : (i%3==1 ? 0: null), 
-            number_of_units: i%3==0 ? 1 : (i%3==1 ? 0: null), 
-            bedroom_count: i%3==0 ? 1 : (i%3==1 ? 0: null), 
-            average_bedroom_size: i%3==0 ? "Average" : (i%3==1 ? "Small": null), 
-            bedroom_small_count: i%3==0 ? 1 : (i%3==1 ? 0: null),  // Random small bedrooms or null
-            bedroom_medium_count: i%3==0 ? 1 : (i%3==1 ? 0: null),  // Random medium bedrooms or null
-            bedroom_large_count: i%3==0 ? 1 : (i%3==1 ? 0: null),  // Random large bedrooms or null
-            bathroom_count: i%3==0 ? 1 : (i%3==1 ? 0: null),  // Random bathroom count between 1 and 3
-            dining_room_count: i%3==0 ? 1 : (i%3==1 ? 0: null),  // Random dining room count between 1 and 2
-            lounge_room_count: i%3==0 ? 1 : (i%3==1 ? 0: null),  // Random lounge room count between 1 and 2
-            family_room_count: i%3==0 ? 1 : (i%3==1 ? 0: null),  // Random family room count between 0 and 1
-            game_room_count: i%3==0 ? 1 : (i%3==1 ? 0: null),  // Random game room count between 0 and 1
-            sun_room_count: i%3==0 ? 1 : (i%3==1 ? 0: null),  // Random sun room count between 0 and 1
-            balcony_count: i%3==0 ? 1 : (i%3==1 ? 0: null),  // Random balcony count between 0 and 1
-            verandah_count: i%3==0 ? 1 : (i%3==1 ? 0: null),  // Random verandah count between 0 and 1
-            distance_to_bushland_category: i%3==0 ? "Within 10m" : (i%3==1 ? "Within 1m": null),  // Random distance in meters
-            primary_roof_type: [null, 'Tile', 'Metal', 'Shingle', 'Slate'][i%3], // Random roof type
-            has_solar_panels: i%3==0 ? true : (i%3==1 ? false: null), // Random boolean // Random boolean or null
-            primary_wall_type: [null,'Brick', 'Wood', 'Concrete', 'Steel'][i%3], // Random wall type
-            quality_of_construction: [null,'High', 'Medium', 'Low'][i%3], // Random quality
-            has_curved_wall: i%3==0 ? true : (i%3==1 ? false: null), // Random boolean // Random boolean or null
-            has_glass_glazing: i%3==0 ? true : (i%3==1 ? false: null), // Random boolean // Random boolean or null
-            has_plantation_shutter: i%3==0 ? true : (i%3==1 ? false: null), // Random boolean // Random boolean or null
-            has_european_appliances: i%3==0 ? true : (i%3==1 ? false: null), // Random boolean // Random boolean or null
-            has_heating_cooling: i%3==0 ? true : (i%3==1 ? false: null), // Random boolean // Random boolean or null
-            heating_cooling_types: [null, ["ducted_air_con"],["modern"]][i%3], // Random heating/cooling type or null
+            construction_year: 2000 + Math.floor(j%3 * 23), // Random year from 2000 to 2022
+            period_of_construction: ['Modern', 'Contemporary', 'Classic', 'Victorian'][j%3], // Random period
+            number_of_levels: j%3==0 ? 1 : (j%3==1 ? 0: null), 
+            number_of_units: j%3==0 ? 1 : (j%3==1 ? 0: null), 
+            bedroom_count: j%3==0 ? 1 : (j%3==1 ? 0: null), 
+            average_bedroom_size: j%3==0 ? "Average" : (j%3==1 ? "Small": null), 
+            bedroom_small_count: j%3==0 ? 1 : (j%3==1 ? 0: null),  // Random small bedrooms or null
+            bedroom_medium_count: j%3==0 ? 1 : (j%3==1 ? 0: null),  // Random medium bedrooms or null
+            bedroom_large_count: j%3==0 ? 1 : (j%3==1 ? 0: null),  // Random large bedrooms or null
+            bathroom_count: j%3==0 ? 1 : (j%3==1 ? 0: null),  // Random bathroom count between 1 and 3
+            dining_room_count: j%3==0 ? 1 : (j%3==1 ? 0: null),  // Random dining room count between 1 and 2
+            lounge_room_count: j%3==0 ? 1 : (j%3==1 ? 0: null),  // Random lounge room count between 1 and 2
+            family_room_count: j%3==0 ? 1 : (j%3==1 ? 0: null),  // Random family room count between 0 and 1
+            game_room_count: j%3==0 ? 1 : (j%3==1 ? 0: null),  // Random game room count between 0 and 1
+            sun_room_count: j%3==0 ? 1 : (j%3==1 ? 0: null),  // Random sun room count between 0 and 1
+            balcony_count: j%3==0 ? 1 : (j%3==1 ? 0: null),  // Random balcony count between 0 and 1
+            verandah_count: j%3==0 ? 1 : (j%3==1 ? 0: null),  // Random verandah count between 0 and 1
+            distance_to_bushland_category: j%3==0 ? "Within 10m" : (j%3==1 ? "Within 1m": null),  // Random distance in meters
+            primary_roof_type: [null, 'Tile', 'Metal', 'Shingle', 'Slate'][j%3], // Random roof type
+            has_solar_panels: j%3==0 ? true : (j%3==1 ? false: null), // Random boolean // Random boolean or null
+            primary_wall_type: [null,'Brick', 'Wood', 'Concrete', 'Steel'][j%3], // Random wall type
+            quality_of_construction: [null,'High', 'Medium', 'Low'][j%3], // Random quality
+            has_curved_wall: j%3==0 ? true : (j%3==1 ? false: null), // Random boolean // Random boolean or null
+            has_glass_glazing: j%3==0 ? true : (j%3==1 ? false: null), // Random boolean // Random boolean or null
+            has_plantation_shutter: j%3==0 ? true : (j%3==1 ? false: null), // Random boolean // Random boolean or null
+            has_european_appliances: j%3==0 ? true : (j%3==1 ? false: null), // Random boolean // Random boolean or null
+            has_heating_cooling: j%3==0 ? true : (j%3==1 ? false: null), // Random boolean // Random boolean or null
+            heating_cooling_types: [null, ["ducted_air_con"],["modern"]][j%3], // Random heating/cooling type or null
             is_primary: is_primary // Only one structure is primary
         });
     }
