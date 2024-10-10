@@ -13,8 +13,12 @@ function generateRandomAddress(index) {
     const dpid = gnafPID ? null : `DPID${String(index).padStart(5, '0')}`;
 
     // Generate random latitude and longitude as strings
-    const latitude = (Math.random() * 180 - 90).toFixed(6).toString();
-    const longitude = (Math.random() * 360 - 180).toFixed(6).toString();
+    const latitude = index%2 == 1? {
+        $numberDecimal: (Math.random() * 180 - 90).toFixed(6).toString()
+    } : null;
+    const longitude = index%2 == 1 ? {
+        $numberDecimal: (Math.random() * 360 - 180).toFixed(6).toString()
+    } : null;
 
     return {
         fullAddress: `${randomStreetNumber} ${randomStreet}, ${randomCity}, ${randomState} ${randomPostcode}`,
