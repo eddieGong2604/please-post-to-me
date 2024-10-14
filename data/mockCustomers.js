@@ -18,7 +18,7 @@ const mockCustomers = [
             { full_address: mockAddresses[11].fullAddress, gnaf_pid: mockAddresses[11].gnafPID, latitude: {$numberDecimal: mockAddresses[11].latitude}, longitude: {$numberDecimal: mockAddresses[11].longitude}, preferred: false, country: mockAddresses[11].country },
             { full_address: mockAddresses[12].fullAddress, gnaf_pid: mockAddresses[12].gnafPID, latitude: {$numberDecimal: mockAddresses[12].latitude}, longitude: {$numberDecimal: mockAddresses[12].longitude}, preferred: false, country: mockAddresses[12].country },
             { full_address: mockAddresses[1].fullAddress, gnaf_pid: mockAddresses[1].gnafPID, latitude: {$numberDecimal: mockAddresses[1].latitude}, longitude: {$numberDecimal: mockAddresses[1].longitude}, preferred: true, country: mockAddresses[1].country },
-            { full_address: mockAddresses[0].fullAddress, dpid: "DP042024", latitude: {$numberDecimal: mockAddresses[0].latitude}, longitude: {$numberDecimal: mockAddresses[0].longitude}, preferred: false, country: mockAddresses[0].country }
+            { full_address: mockAddresses[0].fullAddress, dpid: "DP000001", latitude: {$numberDecimal: mockAddresses[0].latitude}, longitude: {$numberDecimal: mockAddresses[0].longitude}, preferred: false, country: mockAddresses[0].country }
         ],
         aliases: mockAliases.filter(ma=>ma.mock__field__customerId == 1),
         current_policy_count: 1,
@@ -36,7 +36,7 @@ const mockCustomers = [
         is_valid: true,
         addresses: [
             { full_address: mockAddresses[10].fullAddress, gnaf_pid: mockAddresses[10].gnafPID, latitude: {$numberDecimal: mockAddresses[10].latitude}, longitude: {$numberDecimal: mockAddresses[10].longitude}, preferred: false, country: mockAddresses[10].country },
-            { full_address: mockAddresses[2].fullAddress, dpid: "DPID123123", latitude: {$numberDecimal: mockAddresses[2].latitude}, longitude: {$numberDecimal: mockAddresses[2].longitude}, preferred: true, country: mockAddresses[2].country }
+            { full_address: mockAddresses[2].fullAddress, dpid: "DP000001", latitude: {$numberDecimal: mockAddresses[2].latitude}, longitude: {$numberDecimal: mockAddresses[2].longitude}, preferred: true, country: mockAddresses[2].country }
         ],
         aliases: mockAliases.filter(ma=>ma.mock__field__customerId == 2),
         current_policy_count: 1,
@@ -135,7 +135,7 @@ const mockCustomers = [
         is_valid: true,
         addresses: [
             { full_address: mockAddresses[6].fullAddress, gnaf_pid: mockAddresses[6].gnafPID, latitude: {$numberDecimal: mockAddresses[6].latitude}, longitude: {$numberDecimal: mockAddresses[6].longitude}, preferred: true, country: mockAddresses[6].country },
-            { full_address: mockAddresses[7].fullAddress, dpid: "DPID77777", latitude: {$numberDecimal: mockAddresses[7].latitude}, longitude: {$numberDecimal: mockAddresses[7].longitude}, preferred: false, country: mockAddresses[7].country }
+            { full_address: mockAddresses[7].fullAddress, dpid: "DP000001", latitude: {$numberDecimal: mockAddresses[7].latitude}, longitude: {$numberDecimal: mockAddresses[7].longitude}, preferred: false, country: mockAddresses[7].country }
         ],
         aliases: mockAliases.filter(ma=>ma.mock__field__customerId == 8),
         current_policy_count: 0,
