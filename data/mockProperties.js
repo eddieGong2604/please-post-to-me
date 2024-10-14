@@ -18,15 +18,14 @@ const generateMockProperties = (count) => {
             has_tennis_court: i%3==0 ? true : (i%3==1 ? false: null), // Random boolean
             carport_count: i%3==0 ? 1 : (i%3==1 ? 0: null), 
             garage_count: i%3==0 ? 1 : (i%3==1 ? 0: null), 
-            structures: generateMockStructures() // Generate an array of structures
+            structures: generateMockStructures(i % 3 == 0 ? 2 : (i%3==1 ? 1 : 0)) // Generate an array of structures
         });
     }
     return properties;
 };
 
 // Function to generate mock structures
-const generateMockStructures = () => {
-    const numberOfStructures = Math.floor(Math.random() * 3); // Random count of structures between 0 to 2
+const generateMockStructures = (numberOfStructures) => {
     const structures = [];
     
     for (let j = 0; j < numberOfStructures; j++) {
