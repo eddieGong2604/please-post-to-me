@@ -6,6 +6,9 @@ const generateMockProperties = (count) => {
         const gnafPID = `GNAFPID${String(i).padStart(5, '0')}`;
         properties.push({
             property_id: gnafPID, // Matching with gnaf_pid from addresses
+            centroid: j%2==0 ? {
+                coordinates: [151.15490977, -34.06691731]
+            } : null,
             slope: i%3==0 ? "Flat/Gentle" : (i%3==1 ? "Freestanding": null), // Example slope value
             storage_small_count: i%3==0 ? 1 : (i%3==1 ? 0: null), // Random count
             storage_large_count: i%3==0 ? 1 : (i%3==1 ? 0: null), // Random count
@@ -29,9 +32,6 @@ const generateMockStructures = () => {
     for (let j = 0; j < numberOfStructures; j++) {
         const is_primary = j === 0; // Mark the first structure as primary
         structures.push({
-            centroid: j%2==0 ? {
-                coordinates: [151.15490977, -34.06691731]
-            } : null,
             construction_year: 2000 + Math.floor(j%3 * 23), // Random year from 2000 to 2022
             period_of_construction: ['Modern', 'Contemporary', 'Classic', 'Victorian'][j%3], // Random period
             number_of_levels: j%3==0 ? 1 : (j%3==1 ? 0: null), 
