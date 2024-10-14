@@ -7,7 +7,7 @@ const generateMockProperties = (count) => {
         properties.push({
             property_id: gnafPID, // Matching with gnaf_pid from addresses
             centroid: i%2==0 ? {
-                coordinates: [151.15490977, -34.06691731]
+                coordinates: [151.15490977 + i, -34.06691731 + i]
             } : null,
             slope: i%3==0 ? "Flat/Gentle" : (i%3==1 ? "Freestanding": null), // Example slope value
             storage_small_count: i%3==0 ? 1 : (i%3==1 ? 0: null), // Random count
