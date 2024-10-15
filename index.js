@@ -9,6 +9,8 @@ import userMeRoutes from './routes/user-me.js';
 import addressesRoutes from './routes/addresses.js'
 import propertiesRoutes from './routes/properties.js'
 import geofactorsRoutes from './routes/geofactors.js'
+import rootRoutes from './routes/root.js'
+
 import cors from 'cors';
 const app = express();
 const port = 3000;
@@ -25,6 +27,7 @@ app.use('/users-me', userMeRoutes );
 app.use('/addresses', addressesRoutes);
 app.use('/properties', propertiesRoutes);
 app.use('/geofactors', geofactorsRoutes);
+app.use('', rootRoutes);
 
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
